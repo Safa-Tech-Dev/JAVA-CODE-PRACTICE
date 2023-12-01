@@ -15,5 +15,6 @@ public class Java8 {
         List<Integer> list = Arrays.asList(arr);
         List<Integer> l = list.stream().filter(i -> i % 2 == 0 ).collect(Collectors.toList());
         System.out.println(l);
+        list.stream().filter(i -> i % 2 == 0).forEach(System.out::println);
     }
 }
