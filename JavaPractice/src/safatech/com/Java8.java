@@ -47,6 +47,10 @@ public class Java8 {
             System.out.println("No value present");
         }
         //method -2
+        Optional<Integer> first = myList3.stream().findFirst();
+        Integer i = first.get();
+        System.out.println(i);
+        //method - 3
         myList3.stream().findFirst().ifPresent(System.out::println);
 
     }
