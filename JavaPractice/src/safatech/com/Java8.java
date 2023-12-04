@@ -1,7 +1,9 @@
 package safatech.com;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Java8 {
@@ -23,5 +25,15 @@ public class Java8 {
         List<Integer> myList2 = Arrays.asList(10,12,15,8,9,7,5);
         myList2.stream().map(s -> s + "") // converting to string
                 .filter( i -> i.startsWith("1")).forEach( i -> System.out.println(i));
+
+        /*
+        3. How to find duplicate elements in a given integers list in java using Stream functions?
+         */
+        System.out.println("********** Find the Duplicate Elements ************");
+        Integer[] intArray = new Integer[]{12,34,12,5,5,23};
+        List<Integer> myList3 = Arrays.asList(intArray);
+        Set<Integer> mySet = new HashSet<>();
+        myList3.stream().filter(n -> !mySet.add(n)).forEach(System.out::println);
+
     }
 }
