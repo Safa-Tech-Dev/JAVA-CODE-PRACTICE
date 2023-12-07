@@ -35,7 +35,7 @@ public class Java8 {
         myList3.stream().filter(n -> !mySet.add(n)).forEach(System.out::println);
 
         /*
-        Given the list of integers, find the first element of the list using Stream functions?
+        4.Given the list of integers, find the first element of the list using Stream functions?
          */
         System.out.println("********** Find first Element of the list");
 
@@ -52,6 +52,13 @@ public class Java8 {
         System.out.println(i);
         //method - 3
         myList3.stream().findFirst().ifPresent(System.out::println);
+
+        /*
+        5. Given a list of integers, find the total number of elements present in the list using Stream functions?
+         */
+        System.out.println("******* total number of elements present in the list ***********");
+        long count = myList3.stream().count();
+        System.out.println(count);
 
     }
 
