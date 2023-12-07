@@ -37,7 +37,7 @@ public class Java8 {
         /*
         4.Given the list of integers, find the first element of the list using Stream functions?
          */
-        System.out.println("********** Find first Element of the list");
+        System.out.println("********** Find first Element of the list************");
 
         // method -1
         Optional optional = myList3.stream().filter(i -> i > 12).findFirst();
@@ -59,6 +59,15 @@ public class Java8 {
         System.out.println("******* total number of elements present in the list ***********");
         long count = myList3.stream().count();
         System.out.println(count);
+
+        /*
+            6. Given a list of integers,
+             find the maximum value element present in it using Stream functions?
+         */
+
+        System.out.println("****** Max element in the list ************");
+        Integer max = myList3.stream().max(Integer::compare).get();
+        System.out.println(max);
 
     }
 
