@@ -1,6 +1,5 @@
 package safatech.com;
 
-import javax.sound.midi.Soundbank;
 import java.io.FileReader;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -67,6 +66,23 @@ public class CollectionPractice {
         while (it.hasNext()){
             System.out.println(it.next());
             syn_list.add("Saddam");
+        }
+        /*
+        Write a program in Java to display the contents of a
+        HashTable using enumeration.
+         */
+        System.out.println("*********contents of a HashTable using enumeration*******");
+        Hashtable<String, String> hashtable = new Hashtable<>();
+        hashtable.put("1","Monday");
+        hashtable.put("2","Tuesday");
+        hashtable.put("3","Wednesday");
+        hashtable.put("4","Thursday");
+        hashtable.put("5","Friday");
+        hashtable.put("6","Saturday");
+        hashtable.put("7","Sunday");
+        Enumeration<String> enumeration_hash_table = hashtable.elements();
+        while (enumeration_hash_table.hasMoreElements()){
+            System.out.println(enumeration_hash_table.nextElement());// not in order
         }
      }
 }
