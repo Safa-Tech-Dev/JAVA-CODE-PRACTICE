@@ -83,6 +83,24 @@ public class CollectionPractice {
         Enumeration<String> enumeration_hash_table = hashtable.elements();
         while (enumeration_hash_table.hasMoreElements()){
             System.out.println(enumeration_hash_table.nextElement());// not in order
+
+            /*
+            program to shuffle all the elements of a collection in Java.
+             */
+            System.out.println("***** shuffled all the elements of a collection *********");
+            ArrayList<String> list = new ArrayList<>();
+            list.add("Monday");
+            list.add("Tuesday");
+            list.add("Wednesday");
+            list.add("Thursday");
+            list.add("Friday");
+            list.add("Saturday");
+            list.add("Sunday");
+            System.out.println("Before Shuffle");
+            System.out.println(list);
+            System.out.println("After Shuffle");
+            Collections.shuffle(list);
+            System.out.println(list);
         }
      }
 }
