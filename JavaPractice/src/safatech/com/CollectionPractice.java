@@ -96,11 +96,26 @@ public class CollectionPractice {
             list.add("Friday");
             list.add("Saturday");
             list.add("Sunday");
-            System.out.println("Before Shuffle");
-            System.out.println(list);
-            System.out.println("After Shuffle");
+            System.out.println("Before Shuffle : " + list);
             Collections.shuffle(list);
-            System.out.println(list);
+            System.out.println("After Shuffle : " + list);
+
+            /*
+            program in Java to clone a Treeset to another Treeset.
+             */
+            System.out.println("**** Printing clone of TreeSet *****");
+            TreeSet<String> treeSet = new TreeSet<>();
+            treeSet.add("Monday");
+            treeSet.add("Tuesday");
+            treeSet.add("Wednesday");
+            treeSet.add("Thursday");
+            treeSet.add("Friday");
+            treeSet.add("Saturday");
+            treeSet.add("Saturday");
+
+            System.out.println("Original Set : " + treeSet);
+            TreeSet<String> clone_tree_set = (TreeSet<String>) treeSet.clone();
+            System.out.println("Cloned Tree Set : " + clone_tree_set);
         }
      }
 }
