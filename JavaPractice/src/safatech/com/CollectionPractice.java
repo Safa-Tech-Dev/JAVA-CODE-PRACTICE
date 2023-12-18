@@ -116,6 +116,45 @@ public class CollectionPractice {
             System.out.println("Original Set : " + treeSet);
             TreeSet<String> clone_tree_set = (TreeSet<String>) treeSet.clone();
             System.out.println("Cloned Tree Set : " + clone_tree_set);
+
+            /*
+            Write a program in java to get the collection view of the
+            values present in a HashMap.
+             */
+            System.out.println("*********Printing Collection view of HashMap ***********");
+            HashMap<String,String> map = new HashMap<>();
+            map.put("1","Monday");
+            map.put("2","Tuesday");
+            map.put("3","Wednesday");
+            map.put("4","Thursday");
+            map.put("5","Friday");
+            map.put("6","Saturday");
+            map.put("7","Sunday");
+            System.out.println("Original HashMap : " + map);
+            System.out.println("Collection HashMap : " + map.values());
+
+            /*
+            Write a program in java to join two arraylists into one
+            arraylist.
+             */
+            System.out.println("***** join two arraylists into one arraylist *******");
+            ArrayList<String> list_1 = new ArrayList<>();
+            list_1.add("Monday");
+            list_1.add("Tuesday");
+            list_1.add("Wednesday");
+            list_1.add("Thursday");
+            System.out.println("Printing 1st ArrayList : " + list_1);
+
+            ArrayList<String> list_2 = new ArrayList<>();
+            list_2.add("Friday");
+            list_2.add("Saturday");
+            list_2.add("Sunday");
+            System.out.println("Printing 2nd ArrayList : " + list_2);
+
+            ArrayList<String> joined_list = new ArrayList<>();
+            joined_list.addAll(list_1);
+            joined_list.addAll(list_2);
+            System.out.println("Printing joined ArrayList : " + joined_list);
         }
      }
 }

@@ -1,6 +1,7 @@
 package safatech.com;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Java8 {
@@ -33,6 +34,53 @@ public class Java8 {
         List<Integer> myList3 = Arrays.asList(intArray);
         Set<Integer> mySet = new HashSet<>();
         myList3.stream().filter(n -> !mySet.add(n)).forEach(System.out::println);
+
+        //method - 2
+        String s1 = "ILoveDawateIslami";
+        List<String> duplicatElements = Arrays.stream(s1.split(""))
+                .map(String::toLowerCase)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream()
+                .filter(x -> x.getValue() > 1)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        System.out.println(duplicatElements);
+
+        /*
+        Find the Unique Element
+         */
+        System.out.println("********* Printing Unique Elements *********");
+        List<String> uniqueElement =  Arrays.stream(s1.split(""))
+                .map(String::toLowerCase)
+                        .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+                                .entrySet().stream()
+                        .filter(x -> x.getValue() == 1)
+                                .map(Map.Entry::getKey)
+                                        .collect(Collectors.toList());
+        System.out.println(uniqueElement);
+        /*
+            Find First Non-Repeated Element from the String
+         */
+        System.out.println("*********Printing first Non-Repeated Element*********");
+        String first_non_Repeated_Element = Arrays.stream(s1.split(""))
+                .map(String::toLowerCase)
+                        .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new, Collectors.counting()))
+                                .entrySet().stream()
+                        .filter(x -> x.getValue() == 1)
+                                        .findFirst().get().getKey();
+        System.out.println(first_non_Repeated_Element);
+
+        /*
+            Find First Repeated Element from the String
+         */
+        System.out.println("****************first Repeated Element******************");
+        String firstRepeatedElement = Arrays.stream(s1.split(""))
+                .map(String::toLowerCase)
+                        .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()))
+                                .entrySet().stream()
+                        .filter(x -> x.getValue() > 1)
+                                .findFirst().get().getKey();
+        System.out.println(firstRepeatedElement);
 
         /*
         4.Given the list of integers, find the first element of the list using Stream functions?
@@ -68,6 +116,40 @@ public class Java8 {
         System.out.println("****** Max element in the list ************");
         Integer max = myList3.stream().max(Integer::compare).get();
         System.out.println(max);
+
+        /*
+        7.Write a program to print the count of each character in a String?
+         */
+        System.out.println("*******Printing Each characters count*********");
+        String s = "ILoveDawateIslami";
+        Map<String, Long> map = Arrays.stream(s.split(""))
+                .map(String::toLowerCase)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(map);
+
+        /*
+         Given a list of integers, sort all the values present in it using Stream functions?
+         */
+        System.out.println("******** printing in ascending order ************");
+        List<Integer> number = Arrays.asList(10,15,8,49,25,98,98,32,15);
+        number.stream().sorted().forEach(System.out::println);
+        /*
+        Given a list of integers, sort all the values present in it in descending order using Stream functions?
+         */
+        System.out.println("******** printing in descending order ************");
+        number.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
+        /*
+        Find the second Highest element from the Array
+         */
+
+        System.out.println("******* Printing Second Highest Element ********☺");
+        int[] array = {5,9,11,2,8,21,1};
+        Integer firstElement = Arrays.stream(array).boxed()
+                .sorted(Collections.reverseOrder())
+                .skip(1)
+                .findFirst()
+                .get();
+        System.out.println(firstElement);
 
     }
 
