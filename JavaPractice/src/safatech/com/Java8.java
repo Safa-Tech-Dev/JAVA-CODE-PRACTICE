@@ -3,6 +3,7 @@ package safatech.com;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Java8 {
 
@@ -161,6 +162,44 @@ public class Java8 {
                 .reduce((word1, word2) -> word1.length() > word2.length() ? word1 : word2)
                 .get();
         System.out.println(longestString);
+
+        /*
+        String.join method
+        */
+        System.out.println("***** Printing String.join method******");
+
+        List<String> nos = Arrays.asList("1","2","3","4");
+        String results = String.join("-", nos);
+        System.out.println(results);
+
+        /*
+        Skip and Limit example (2 - 9)
+         */
+        System.out.println("***** Printing Skip() and Limit() ********");
+
+        IntStream.rangeClosed(1,10)
+                .skip(1)
+                .limit(8)
+                .forEach(System.out::println);
+        /*
+        Given an integer array nums, return true if any value appears
+        at least twice in the array, and return false if every element is distinct.
+         */
+        int[] nums = {1,2,3,1};
+        System.out.println(Java8.containsDuplicate(nums));
+
+    }
+
+    public static boolean containsDuplicate(int[] nums){
+
+        List<Integer> list = Arrays.stream(nums)
+                    .boxed()
+                .collect(Collectors.toList());
+        Set<Integer> set = new HashSet<>(list);
+        if(list.size() == set.size())
+            return false;
+        else
+            return true;
 
     }
 
