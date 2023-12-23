@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Java8 {
 
@@ -188,6 +189,26 @@ public class Java8 {
         int[] nums = {1,2,3,1};
         System.out.println(Java8.containsDuplicate(nums));
 
+        /*
+        Write a Java 8 program to concatenate two Streams?
+         */
+        System.out.println(" ******** Printing Concat Stream ********");
+        List<String> l1 = Arrays.asList("Saddam", "Farheen");
+        List<String> l2 = Arrays.asList("Safa", "Khan");
+        Stream<String> concatStream = Stream.concat(l1.stream(),l2.stream());
+        concatStream.forEach(j -> System.out.println(j + " "));
+
+        /*Java 8 program to perform cube on list elements and filter numbers greater than 50.*/
+        System.out.println("********** Printing cube on list and no. > 50 *****");
+        myList1.stream().map( k -> k * k * k).filter(m -> m > 50).forEach(System.out::println);
+
+        /*
+         Write a Java 8 program to sort an array and then convert the sorted array into Stream?
+         */
+        System.out.println(" ********** Printing sorted with and converted to stream ************");
+        int[] ar = { 99, 55, 203, 99, 4, 91 };
+        Arrays.parallelSort(ar);
+        Arrays.stream(ar).forEach(System.out::println);
     }
 
     public static boolean containsDuplicate(int[] nums){

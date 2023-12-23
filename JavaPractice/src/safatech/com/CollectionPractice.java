@@ -9,6 +9,7 @@ public class CollectionPractice {
 
     public static void main(String[] args) {
 
+
         //How can you make an ArrayList read-only
         System.out.println("****** ArrayList Read Only ***********");
         try{
