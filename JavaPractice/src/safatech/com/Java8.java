@@ -209,6 +209,16 @@ public class Java8 {
         int[] ar = { 99, 55, 203, 99, 4, 91 };
         Arrays.parallelSort(ar);
         Arrays.stream(ar).forEach(System.out::println);
+
+        /*
+        How to use map to convert object into Uppercase in Java 8?
+         */
+        System.out.println("************ Printing String to Uppper Case ********");
+        String[] name = {"saddam", "khan", "farheen", "Safa naaz"};
+        List<String> nameList = Arrays.stream(name)
+                .map(String::toUpperCase)
+                .collect(Collectors.toList());
+        System.out.println(nameList);
     }
 
     public static boolean containsDuplicate(int[] nums){
