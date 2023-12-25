@@ -49,6 +49,15 @@ public class Java8 {
         System.out.println(duplicatElements);
 
         /*
+        How to count each element/word from the String ArrayList in Java8?
+         */
+        System.out.println("********** count each element/word from the String ArrayList ************");
+        List<String> names = Arrays.asList("AA","BB", "CC","AA");
+        Map<String, Long> namesCounting = names.stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(namesCounting);
+
+        /*
         Find the Unique Element
          */
         System.out.println("********* Printing Unique Elements *********");
@@ -219,6 +228,10 @@ public class Java8 {
                 .map(String::toUpperCase)
                 .collect(Collectors.toList());
         System.out.println(nameList);
+        /*
+        How to convert a List of objects into a Map by considering duplicated keys and store them in sorted order?
+         */
+
     }
 
     public static boolean containsDuplicate(int[] nums){
