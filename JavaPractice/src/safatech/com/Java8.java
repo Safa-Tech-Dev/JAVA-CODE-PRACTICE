@@ -128,6 +128,12 @@ public class Java8 {
         Integer max = myList3.stream().max(Integer::compare).get();
         System.out.println(max);
 
+        // method - 2
+        /*
+        Write a Program to find the Maximum element in an array?
+        */
+        int[] arr2 = {12,19,20,88,00,9};
+        System.out.println(Java8.findMaxElement(arr2));
         /*
         7.Write a program to print the count of each character in a String?
          */
@@ -232,6 +238,10 @@ public class Java8 {
         How to convert a List of objects into a Map by considering duplicated keys and store them in sorted order?
          */
 
+    }
+
+    private static int findMaxElement(int[] intArray) {
+        return Arrays.stream(intArray).max().getAsInt();
     }
 
     public static boolean containsDuplicate(int[] nums){
