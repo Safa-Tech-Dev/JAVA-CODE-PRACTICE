@@ -234,9 +234,45 @@ public class Java8 {
                 .map(String::toUpperCase)
                 .collect(Collectors.toList());
         System.out.println(nameList);
+
         /*
-        How to convert a List of objects into a Map by considering duplicated keys and store them in sorted order?
+        Array = {1,3,5,2,8,7,9,10} All the even numbers at start and odd numbers in the last
          */
+        System.out.println(" ****** Printing All the even numbers at start and odd numbers in the last *************");
+        int[] arr1 = {1,3,5,2,8,7,9,10};
+        int[] separatedEvenOdd = separateEvenOdd(arr1);
+        System.out.println(Arrays.toString(separatedEvenOdd));
+
+        /*
+        Count even and odd digits in a int nums = 123456;
+         */
+        System.out.println(" ********** Printing Count of even and odd digits *********");
+        int num = 123456;
+        Java8.countEvenOdd(num);
+    }
+    public static void countEvenOdd(int nums){
+
+        int even_count = 0;
+        int odd_count = 0;
+        while(nums > 0){
+
+            int rem = nums % 10;
+            if(rem % 2 == 0){
+                even_count++;
+            }else{
+                odd_count++;
+            }
+            nums = nums / 10;
+        }
+        System.out.println("Even count :" + even_count  + "," + "Odd count : " + odd_count);
+    }
+    public static int[] separateEvenOdd(int[] arr){
+
+        return IntStream.concat(
+                Arrays.stream(arr)
+                        .filter( e -> e % 2 == 0),
+                        Arrays.stream(arr)
+                                .filter(o -> o % 2 != 0)).toArray();
 
     }
 

@@ -1,8 +1,8 @@
 package safatech.com;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import jdk.nashorn.api.tree.TemplateLiteralTree;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class RealTimeJava8 {
@@ -37,8 +37,37 @@ public class RealTimeJava8 {
          */
         System.out.println(" ******* Printing the name of all departments ***********");
         RealTimeJava8.getDepartmentName(employeeList);
+
+        /*
+        Find the average age of Male and Female Employees.
+         */
+        System.out.println("Printing average age of Male and Female Employees");
+        RealTimeJava8.getAvgAge(employeeList);
+         /*
+    Get the details of highest paid employee in the organization?
+     */
+        RealTimeJava8.getDetailsOfHighestPaidEmployee(employeeList);
+
     }
 
+    /*
+    Get the details of highest paid employee in the organization?
+     */
+
+    public static void getDetailsOfHighestPaidEmployee(List<Employee> employeeList){
+
+        Optional<Employee> employee = employeeList.stream().collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)));
+        Employee emp = employee.get();
+        System.out.println("Details Of Highest Paid Employee");
+        System.out.println("====================================");
+        System.out.println("ID: " + emp.getId());
+        System.out.println("Name: " + emp.getName());
+        System.out.println("Gender: " + emp.getGender());
+        System.out.println("Department: " + emp.getDepartment());
+        System.out.println("Age: " + emp.getAge());
+        System.out.println("Year Of Joining: " + emp.getYearOfJoining());
+        System.out.println("Salary: " + emp.getSalary());
+    }
     /*
     Print the name of all departments in the organization?
      */
@@ -58,5 +87,15 @@ public class RealTimeJava8 {
         Map<String, Long> noOfMaleFemale = employeeList.stream()
                 .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
         System.out.println(noOfMaleFemale);
+    }
+
+    /*
+    Find the average age of Male and Female Employees.
+     */
+    public static void getAvgAge(List<Employee> employeeList){
+
+        Map<String, Double> avgAge = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)));
+        System.out.println(avgAge);
     }
 }
