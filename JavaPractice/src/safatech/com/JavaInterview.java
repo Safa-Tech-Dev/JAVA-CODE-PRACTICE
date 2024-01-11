@@ -22,9 +22,36 @@ public class JavaInterview {
         /*
         Finding the nth element in the Fibonacci series
          */
-        System.out.println("******* Finding the nth element in the Fibonacci series ****");
+        System.out.println("******* Finding the n-th element in the Fibonacci series ****");
         System.out.println(JavaInterview.fibonacci(10));
 
+        /*
+        Find the duplicate Character in a String
+         */
+        System.out.println(JavaInterview.findDuplicateUsingFor_Map("codedecode"));
+
+    }
+
+    public static Set<Character> findDuplicateUsingFor_Map(String name){
+
+        System.out.println(" ***** Printing the Duplicates character ******");
+        Set<Character> duplicates = new LinkedHashSet<>();
+        HashMap<Character, Integer> countMap = new HashMap<>();
+
+        for(int i = 0; i< name.length(); i++){
+
+            if(countMap.containsKey(name.charAt(i)))
+                countMap.put(name.charAt(i), countMap.get(name.charAt(i)) + 1);
+            else
+                countMap.put(name.charAt(i), 1);
+
+        }
+        for(Map.Entry<Character, Integer> entry : countMap.entrySet()){
+
+            if(entry.getValue() > 1)
+                duplicates.add(entry.getKey());
+        }
+        return duplicates;
     }
 
     public static int fibonacci(int n){
