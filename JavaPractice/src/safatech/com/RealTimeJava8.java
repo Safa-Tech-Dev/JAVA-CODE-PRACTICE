@@ -48,6 +48,25 @@ public class RealTimeJava8 {
      */
         RealTimeJava8.getDetailsOfHighestPaidEmployee(employeeList);
 
+        /*
+        Get the names of all employees who have joined after 2015?
+         */
+        RealTimeJava8.getNameJoiningDateGT2015(employeeList);
+
+    }
+
+
+
+    /*
+    Get the names of all employees who have joined after 2015?
+     */
+    public static void getNameJoiningDateGT2015(List<Employee> employeeList){
+
+        System.out.println("******** Get the names of all employees who have joined after 2015? ********");
+        employeeList.stream()
+                .filter(emp -> emp.getYearOfJoining() > 2015)
+                .map(Employee::getName)
+                .forEach(emp -> System.out.println(emp));
     }
 
     /*
