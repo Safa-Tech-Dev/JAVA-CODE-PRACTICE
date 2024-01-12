@@ -1,16 +1,17 @@
-package safatech.com;
+package safatech.com.comparator;
 
 public class Employee {
 
-    int id;
-    String name;
-    int age;
-    String gender;
-    String department;
-    int yearOfJoining;
-    double salary;
+    private int id;
+    private String name;
+    private int age;
+    private String gender;
+    private String department;
+    private int yearOfJoining;
+    private double salary;
+    private Address address;
 
-    public Employee(int id, String name, int age, String gender, String department, int yearOfJoining, double salary) {
+    public Employee(int id, String name, int age, String gender, String department, int yearOfJoining, double salary, Address address) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -18,6 +19,7 @@ public class Employee {
         this.department = department;
         this.yearOfJoining = yearOfJoining;
         this.salary = salary;
+        this.address = address;
     }
 
     public int getId() {
@@ -76,6 +78,15 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -86,6 +97,7 @@ public class Employee {
                 ", department='" + department + '\'' +
                 ", yearOfJoining=" + yearOfJoining +
                 ", salary=" + salary +
+                ", address=" + address +
                 '}';
     }
 }

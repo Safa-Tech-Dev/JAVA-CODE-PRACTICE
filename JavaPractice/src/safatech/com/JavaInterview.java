@@ -17,7 +17,7 @@ public class JavaInterview {
         /*
         Printing Isogram or not = Which does not contain any duplicate characters
          */
-        System.out.println(JavaInterview.isIsogram("Pen"));
+        System.out.println(JavaInterview.isIsogram("codedecode"));
 
         /*
         Finding the nth element in the Fibonacci series
@@ -28,8 +28,34 @@ public class JavaInterview {
         /*
         Find the duplicate Character in a String
          */
-        System.out.println(JavaInterview.findDuplicateUsingFor_Map("codedecode"));
+        System.out.println(JavaInterview.findDuplicateUsingFor_Map("iloveawateislami"));
 
+        /*
+         Given an array of integers, return the indices of the two numbers
+         whose sum is equal to a given target.
+         You may assume that each input would have exactly one solution,
+          and you may not use the same element twice.
+          Given nums = [2, 7, 11, 15], target = 9
+          The output should be [0, 1].
+          Because nums[0] + nums[1] = 2 + 7 = 9
+         */
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+        System.out.println(Arrays.toString(JavaInterview.twoSum(nums, target)));
+    }
+    public static int[] twoSum(int[] nums, int target){
+
+        System.out.println("+++++++++++++ Printing Two Sum +++++++++");
+        Map<Integer, Integer> m = new HashMap<>();
+        for(int i = 0; i< nums.length; i++){
+            int complement = target - nums[i];
+            if(m.containsKey(complement) && m.get(complement) != i){
+                return new int[]{m.get(complement),i};
+            }else{
+                m.put(nums[i],i);
+            }
+        }
+        return new int[] {};
     }
 
     public static Set<Character> findDuplicateUsingFor_Map(String name){
@@ -61,6 +87,7 @@ public class JavaInterview {
         else
             return fibonacci(n-1) + fibonacci(n-2);
     }
+//    method - 1
     public static boolean isIsogram(String s){
 
         System.out.println("********** Printing Isogram or not *********");
@@ -76,4 +103,5 @@ public class JavaInterview {
         return isIsogram;
 
     }
+
 }
