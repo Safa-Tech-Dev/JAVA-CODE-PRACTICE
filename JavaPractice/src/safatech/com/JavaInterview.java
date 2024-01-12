@@ -1,5 +1,6 @@
 package safatech.com;
 
+import javax.sound.midi.Soundbank;
 import java.util.*;
 
 public class JavaInterview {
@@ -30,6 +31,10 @@ public class JavaInterview {
          */
         System.out.println(JavaInterview.findDuplicateUsingFor_Map("iloveawateislami"));
 
+        /*
+         // Find the first non-repeating charater's index
+         */
+        System.out.println(JavaInterview.nonRepeatingCharacter("saddam"));
         /*
          Given an array of integers, return the indices of the two numbers
          whose sum is equal to a given target.
@@ -78,6 +83,27 @@ public class JavaInterview {
                 duplicates.add(entry.getKey());
         }
         return duplicates;
+    }
+
+    // Find the first non-repeating charater's index
+    public static int nonRepeatingCharacter(String s){
+
+        System.out.println("***** Printing the first non-repeating charater's Index ******");
+        Map<Character, Integer> mapCount = new HashMap<>();
+        for (int i = 0; i<s.length(); i++){
+            if(mapCount.containsKey(s.charAt(i))){
+                mapCount.put(s.charAt(i), mapCount.get(s.charAt(i)) + 1);
+            }else{
+                mapCount.put(s.charAt(i), 1);
+            }
+        }
+        for(Map.Entry<Character, Integer> entry : mapCount.entrySet()){
+
+            if(entry.getValue() == 1){
+                return entry.getValue();
+            }
+        }
+        return -1;
     }
 
     public static int fibonacci(int n){
