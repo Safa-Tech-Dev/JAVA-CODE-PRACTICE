@@ -3,6 +3,8 @@ package safatech.com;
 import safatech.com.comparator.*;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class RealTimeJava8 {
@@ -44,37 +46,59 @@ public class RealTimeJava8 {
 
         System.out.println("***********************************************************************************");
         /*
-    Find out the count of male and female employees present in the organization?
+      3.1 Find out the count of male and female employees present in the organization?
      */
         System.out.println("******* Printing count of Male and Female employees *****");
         RealTimeJava8.getCountOfMaleFemale(employeeList);
         /*
-        Print the name of all departments in the organization?
+         3.2 Print the name of all departments in the organization?
          */
         System.out.println(" ******* Printing the name of all departments ***********");
         RealTimeJava8.getDepartmentName(employeeList);
 
         /*
-        Find the average age of Male and Female Employees.
+        3.3 Find the average age of Male and Female Employees.
          */
         System.out.println("Printing average age of Male and Female Employees");
         RealTimeJava8.getAvgAge(employeeList);
          /*
-    Get the details of highest paid employee in the organization?
+     3.4 Get the details of highest paid employee in the organization?
      */
         RealTimeJava8.getDetailsOfHighestPaidEmployee(employeeList);
 
         /*
-        Get the names of all employees who have joined after 2015?
+       3.5 Get the names of all employees who have joined after 2015?
          */
         RealTimeJava8.getNameJoiningDateGT2015(employeeList);
+
+        /*
+        3.6 : Count the number of employees in each department?
+         */
+        RealTimeJava8.getNumberOfEmpInEachDept(employeeList);
+
+
+    }
+
+    /*
+    3.6 : Count the number of employees in each department?
+     */
+    public static void getNumberOfEmpInEachDept(List<Employee> employeeList){
+
+        System.out.println("*********** Counting the number of employees in each department ********** ");
+        Map<String, Long> collectedDept = employeeList.stream()
+                .map(Employee::getDepartment)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        Set<Map.Entry<String, Long>> entrySet = collectedDept.entrySet();
+        for(Map.Entry<String, Long> entry : entrySet){
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
 
     }
 
 
-
     /*
-    Get the names of all employees who have joined after 2015?
+    3.5 Get the names of all employees who have joined after 2015?
      */
     public static void getNameJoiningDateGT2015(List<Employee> employeeList){
 
@@ -86,7 +110,7 @@ public class RealTimeJava8 {
     }
 
     /*
-    Get the details of highest paid employee in the organization?
+    3.4 Get the details of highest paid employee in the organization?
      */
 
     public static void getDetailsOfHighestPaidEmployee(List<Employee> employeeList){
@@ -104,7 +128,7 @@ public class RealTimeJava8 {
         System.out.println("Salary: " + emp.getSalary());
     }
     /*
-    Print the name of all departments in the organization?
+    3.3 Print the name of all departments in the organization?
      */
     public static void getDepartmentName(List<Employee> employeeList){
 
@@ -113,24 +137,22 @@ public class RealTimeJava8 {
                 .distinct().forEach(System.out::println);
     }
 
-
     /*
-    Find out the count of male and female employees present in the organization?
-     */
-    public static void getCountOfMaleFemale(List<Employee> employeeList){
-
-        Map<String, Long> noOfMaleFemale = employeeList.stream()
-                .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
-        System.out.println(noOfMaleFemale);
-    }
-
-    /*
-    Find the average age of Male and Female Employees.
+    3.2 Find the average age of Male and Female Employees.
      */
     public static void getAvgAge(List<Employee> employeeList){
 
         Map<String, Double> avgAge = employeeList.stream()
                 .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)));
         System.out.println(avgAge);
+    }
+    /*
+   3.1 Find out the count of male and female employees present in the organization?
+    */
+    public static void getCountOfMaleFemale(List<Employee> employeeList){
+
+        Map<String, Long> noOfMaleFemale = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+        System.out.println(noOfMaleFemale);
     }
 }
