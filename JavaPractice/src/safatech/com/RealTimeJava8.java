@@ -75,7 +75,41 @@ public class RealTimeJava8 {
         3.6 : Count the number of employees in each department?
          */
         RealTimeJava8.getNumberOfEmpInEachDept(employeeList);
+        /*
+        Query 3.7 : What is the average salary of each department?
+         */
+        RealTimeJava8.getAvgSalaryOfEachDept(employeeList);
+        /*
+        Query 3.8 : Get the details of youngest male employee in the product development department?
+         */
+        RealTimeJava8.getYoungestMaleEmployeeInProductDevDept(employeeList);
 
+
+    }
+    /*
+    Query 3.8 : Get the details of youngest male employee in the product development department?
+     */
+    public static void getYoungestMaleEmployeeInProductDevDept(List<Employee> employeeList){
+
+        System.out.println("************ Get the details of youngest male employee in the product development department **********");
+        Optional<Employee> optionalEmployee = employeeList.stream()
+                .filter(e -> e.getGender().equalsIgnoreCase("male") && e.getDepartment().equalsIgnoreCase("product development"))
+                .min(Comparator.comparingInt(Employee::getAge));
+        Employee youngestEmployee = optionalEmployee.get();
+        System.out.println(youngestEmployee);
+    }
+    /*
+    Query 3.7 : What is the average salary of each department?
+     */
+    public static void getAvgSalaryOfEachDept(List<Employee> employeeList){
+
+        System.out.println("******* Printing the average salary of each department *********");
+        Map<String, Double> avgSalaryOfDept = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
+        Set<Map.Entry<String, Double>> entrySet = avgSalaryOfDept.entrySet();
+        for(Map.Entry<String, Double> entry : entrySet){
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
 
     }
 
@@ -86,8 +120,7 @@ public class RealTimeJava8 {
 
         System.out.println("*********** Counting the number of employees in each department ********** ");
         Map<String, Long> collectedDept = employeeList.stream()
-                .map(Employee::getDepartment)
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
 
         Set<Map.Entry<String, Long>> entrySet = collectedDept.entrySet();
         for(Map.Entry<String, Long> entry : entrySet){
