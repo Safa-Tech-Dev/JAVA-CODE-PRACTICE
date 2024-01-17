@@ -92,7 +92,22 @@ public class RealTimeJava8 {
      */
         RealTimeJava8.getMaleNFemaleEmpInSalesNMarkt(employeeList);
 
+        /*
+        Query 3.11 : What is the average salary of male and female employees?
+         */
+        RealTimeJava8.getAvgSalaryOfMaleNFemale(employeeList);
 
+
+    }
+    /*
+    Query 3.11 : What is the average salary of male and female employees?
+     */
+    public static void getAvgSalaryOfMaleNFemale(List<Employee> employeeList){
+
+        System.out.println(" Printing average salary of male and female employees *******");
+        Map<String, Double> avgSalary = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
+        System.out.println(avgSalary);
     }
     /*
     Query 3.10 : How many male and female employees are there in the sales and marketing team?
