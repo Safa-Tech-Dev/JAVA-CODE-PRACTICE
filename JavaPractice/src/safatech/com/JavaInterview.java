@@ -5,19 +5,26 @@ import java.util.*;
 
 public class JavaInterview {
     public static void main(String[] args) {
-        //Output: [5,6,7,1,2,3,4]
-       /* int k = 3;
 
-        // rotatedString = sub(p) + sub(0,p)
-        int[] nums = {1,2,3,4,5,6,7};
-        int[] rotatedArray = new int[nums.length];
-        for(int j = nums.length; j< k; j--,k--){
+        /*
+         Rotate the array by k times;
+         int[] nums = {1,2,3,4,5,6,7};
+         k = 3;
+         Output: [5,6,7,1,2,3,4]
+         */
+        int[] arr = {1,2,3,4,5,6,7};
+        int k = 3;
+        System.out.println("************* Printing the Rotated Array **************");
+        JavaInterview.rotateArray(arr,k);
+        for(int i = 0; i< arr.length; i++){
+            System.out.print(arr[i]+ " ");
+        }
 
-        }*/
 
         /*
         Printing Isogram or not = Which does not contain any duplicate characters
          */
+        System.out.println();
         System.out.println(JavaInterview.isIsogram("codedecode"));
 
         /*
@@ -29,12 +36,12 @@ public class JavaInterview {
         /*
         Find the duplicate Character in a String
          */
-        System.out.println(JavaInterview.findDuplicateUsingFor_Map("iloveawateislami"));
+        System.out.println(JavaInterview.findDuplicateUsingFor_Map("codedecode"));
 
         /*
          // Find the first non-repeating charater's index
          */
-        System.out.println(JavaInterview.nonRepeatingCharacter("saddam"));
+        System.out.println(JavaInterview.nonRepeatingCharacter("codec"));
         /*
          Given an array of integers, return the indices of the two numbers
          whose sum is equal to a given target.
@@ -105,7 +112,33 @@ public class JavaInterview {
         }
         return -1;
     }
+    /*
+    reverse the array
+     */
+    static void reverseArray(int[] a, int start, int end){
 
+        while (start < end){
+
+            int temp = a[start];
+            a[start] = a[end];
+            a[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    static void rotateArray(int[] a, int k){
+        k = k % a.length;
+        if(k < 0){
+            k = k + a.length;
+        }
+        reverseArray(a, 0, a.length-1); // 7,6,5,4,3,2,1
+        reverseArray(a,  0, k -1);//5,6,7,4,3,2,1
+        reverseArray(a, k, a.length-1); //5,6,7,1,2,3,4
+    }
+
+    /*
+    Print the n-th Fibonacci number
+     */
     public static int fibonacci(int n){
 
         if(n <= 1)
@@ -113,8 +146,11 @@ public class JavaInterview {
         else
             return fibonacci(n-1) + fibonacci(n-2);
     }
-//    method - 1
-    public static boolean isIsogram(String s){
+
+    /*
+    Check whether string is a Isogram or not
+     */
+    public static boolean   isIsogram(String s){
 
         System.out.println("********** Printing Isogram or not *********");
         boolean isIsogram = true;

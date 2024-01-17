@@ -83,8 +83,38 @@ public class RealTimeJava8 {
         Query 3.8 : Get the details of youngest male employee in the product development department?
          */
         RealTimeJava8.getYoungestMaleEmployeeInProductDevDept(employeeList);
+        /*
+        Query 3.9 : Who has the most working experience in the organization?
+         */
+        RealTimeJava8.getMostWorkingWorkingExpEmp(employeeList);
+         /*
+    Query 3.10 : How many male and female employees are there in the sales and marketing team?
+     */
+        RealTimeJava8.getMaleNFemaleEmpInSalesNMarkt(employeeList);
 
 
+    }
+    /*
+    Query 3.10 : How many male and female employees are there in the sales and marketing team?
+     */
+    public static void getMaleNFemaleEmpInSalesNMarkt(List<Employee> employeeList){
+
+        System.out.println("************ Printing male and female employees in sales and marketing team *******");
+        Map<String, Long> maleNFemaleEmployee = employeeList.stream()
+                .filter(e -> e.getDepartment().equalsIgnoreCase("sales and marketing"))
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+        System.out.println(maleNFemaleEmployee);
+    }
+    /*
+    Query 3.9 : Who has the most working experience in the organization?
+     */
+    public static void getMostWorkingWorkingExpEmp(List<Employee> employeeList) {
+
+        System.out.println("********** most working experience in the organization **************");
+        Optional<Employee> optionalFirst = employeeList.stream()
+                .sorted(Comparator.comparingInt(Employee::getYearOfJoining)).findFirst();
+        Employee mostWorkingExpEmp = optionalFirst.get();
+        System.out.println(mostWorkingExpEmp);
     }
     /*
     Query 3.8 : Get the details of youngest male employee in the product development department?
