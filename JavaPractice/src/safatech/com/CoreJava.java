@@ -1,9 +1,8 @@
 package safatech.com;
 
-import javax.sound.midi.Soundbank;
 import java.util.*;
 
-public class JavaInterview {
+public class CoreJava {
     public static void main(String[] args) {
 
         /*
@@ -15,7 +14,7 @@ public class JavaInterview {
         int[] arr = {1,2,3,4,5,6,7};
         int k = 3;
         System.out.println("************* Printing the Rotated Array **************");
-        JavaInterview.rotateArray(arr,k);
+        CoreJava.rotateArray(arr,k);
         for(int i = 0; i< arr.length; i++){
             System.out.print(arr[i]+ " ");
         }
@@ -25,23 +24,23 @@ public class JavaInterview {
         Printing Isogram or not = Which does not contain any duplicate characters
          */
         System.out.println();
-        System.out.println(JavaInterview.isIsogram("codedecode"));
+        System.out.println(CoreJava.isIsogram("codedecode"));
 
         /*
         Finding the nth element in the Fibonacci series
          */
         System.out.println("******* Finding the n-th element in the Fibonacci series ****");
-        System.out.println(JavaInterview.fibonacci(10));
+        System.out.println(CoreJava.fibonacci(10));
 
         /*
         Find the duplicate Character in a String
          */
-        System.out.println(JavaInterview.findDuplicateUsingFor_Map("codedecode"));
+        System.out.println(CoreJava.findDuplicateUsingFor_Map("codedecode"));
 
         /*
          // Find the first non-repeating charater's index
          */
-        System.out.println(JavaInterview.nonRepeatingCharacter("codec"));
+        System.out.println(CoreJava.nonRepeatingCharacter("codec"));
         /*
          Given an array of integers, return the indices of the two numbers
          whose sum is equal to a given target.
@@ -53,7 +52,7 @@ public class JavaInterview {
          */
         int[] nums = {2, 7, 11, 15};
         int target = 9;
-        System.out.println(Arrays.toString(JavaInterview.twoSum(nums, target)));
+        System.out.println(Arrays.toString(CoreJava.twoSum(nums, target)));
     }
     public static int[] twoSum(int[] nums, int target){
 

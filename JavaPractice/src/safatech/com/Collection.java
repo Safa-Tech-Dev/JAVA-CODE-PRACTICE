@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class CollectionPractice {
+public class Collection {
 
 
     public static void main(String[] args) {

@@ -97,7 +97,33 @@ public class RealTimeJava8 {
          */
         RealTimeJava8.getAvgSalaryOfMaleNFemale(employeeList);
 
+        /*
+        Query 3.12 : List down the names of all employees in each department?
+         */
+        RealTimeJava8.namesOfEmpInEachDept(employeeList);
 
+
+    }
+    /*
+    Query 3.12 : List down the names of all employees in each department?
+     */
+    public static void namesOfEmpInEachDept(List<Employee> employeeList){
+
+        System.out.println("************* Printing names of all employees in each department ***************");
+        Map<String, List<Employee>> employeeByDept = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment));
+        Set<Map.Entry<String, List<Employee>>> entrySet = employeeByDept.entrySet();
+
+        for(Map.Entry<String, List<Employee>> entry : entrySet){
+
+            System.out.println("-----------------------------------");
+            System.out.println("Employees in :" + entry.getKey());
+            System.out.println("-----------------------------------");
+            List<Employee> list = entry.getValue();
+            for( Employee e : list){
+                System.out.println(e.getName());
+            }
+        }
     }
     /*
     Query 3.11 : What is the average salary of male and female employees?
