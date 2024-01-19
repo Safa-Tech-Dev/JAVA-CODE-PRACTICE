@@ -101,8 +101,23 @@ public class RealTimeJava8 {
         Query 3.12 : List down the names of all employees in each department?
          */
         RealTimeJava8.namesOfEmpInEachDept(employeeList);
+        /*
+        Query 3.13 : What is the average salary and total salary of the whole organization?
+         */
+        RealTimeJava8.avgSalaryAndTotalSalaryOfWholeOrg(employeeList);
 
 
+    }
+    /*
+    Query 3.13 : What is the average salary and total salary of the whole organization?
+     */
+    public static void avgSalaryAndTotalSalaryOfWholeOrg(List<Employee> employeeList){
+
+        System.out.println(" ********* average salary and total salary of the whole organization ****************");
+        DoubleSummaryStatistics employeeSalaryStatistics = employeeList.stream()
+                .collect(Collectors.summarizingDouble(Employee::getSalary));
+        System.out.println("Average Salary : " + employeeSalaryStatistics.getAverage());
+        System.out.println("Total Salary : " + employeeSalaryStatistics.getSum());
     }
     /*
     Query 3.12 : List down the names of all employees in each department?
