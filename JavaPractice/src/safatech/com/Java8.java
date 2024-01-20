@@ -143,6 +143,17 @@ public class Java8 {
                 .map(String::toLowerCase)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(map);
+          /*   bangalore = 1
+        kochi -1
+        chennai -  2
+        trivandrum - 2
+        Pune -3*/
+        List<String> listOfCity = Arrays.asList("kochi", "Trivandrum", "Chennai",
+                "Chennai", "Trivandrum", "Pune", "Pune", "Pune", "Bangalore");
+
+        Map<String, Long> collectedCity = listOfCity.stream().
+                collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(collectedCity);
 
         /*
         8. Given a list of integers, sort all the values present in it using Stream functions?

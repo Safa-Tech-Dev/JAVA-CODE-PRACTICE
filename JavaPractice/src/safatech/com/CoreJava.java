@@ -2,7 +2,7 @@ package safatech.com;
 
 import java.util.*;
 
-public class CoreJava extends Exception {
+public class CoreJava{
 
     public static void main(String[] args) {
 

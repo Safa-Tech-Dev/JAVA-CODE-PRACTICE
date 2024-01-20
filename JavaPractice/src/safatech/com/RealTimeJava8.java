@@ -105,8 +105,38 @@ public class RealTimeJava8 {
         Query 3.13 : What is the average salary and total salary of the whole organization?
          */
         RealTimeJava8.avgSalaryAndTotalSalaryOfWholeOrg(employeeList);
+        /*
+        Query 3.14 : Separate the employees who are younger or equal to 25
+         years from those employees who are older than 25 years.
+         */
+        RealTimeJava8.getSeparatedEmpOlderThan_25AndYoungerOrEqualTo_25Years(employeeList);
 
 
+    }
+    /*
+    Query 3.14 : Separate the employees who are younger or equal to 25 years from
+     those employees who are older than 25 years.
+     */
+    public static void getSeparatedEmpOlderThan_25AndYoungerOrEqualTo_25Years(List<Employee> employeeList){
+
+        System.out.println(" ********** Younger or equal to 25 years from those employees who are older than 25 years ******");
+        Map<Boolean, List<Employee>> partitionedEmployee = employeeList.stream()
+                .collect(Collectors.partitioningBy(e -> e.getAge() > 25));
+
+        Set<Map.Entry<Boolean, List<Employee>>> entrySet = partitionedEmployee.entrySet();
+        for(Map.Entry<Boolean,List<Employee>> entry : entrySet){
+
+            System.out.println("--------------------------------------");
+            if(entry.getKey()){
+                System.out.println("Employees Older than 25 years: ");
+            }else{
+                System.out.println("Employees Younger than or equal to 25 years :");
+            }
+            List<Employee> emp = entry.getValue();
+            for(Employee e : emp){
+                System.out.println(e.getName());
+            }
+        }
     }
     /*
     Query 3.13 : What is the average salary and total salary of the whole organization?
