@@ -143,6 +143,10 @@ public class Java8 {
                 .map(String::toLowerCase)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(map);
+        /*
+        8.Write a program to print the count of each City in a List?
+         */
+        System.out.println(" ************ Printing the count of each City ***************");
           /*   bangalore = 1
         kochi -1
         chennai -  2
@@ -156,21 +160,21 @@ public class Java8 {
         System.out.println(collectedCity);
 
         /*
-        8. Given a list of integers, sort all the values present in it using Stream functions?
+        9. Given a list of integers, sort all the values present in it using Stream functions?
          */
         System.out.println("******** printing in ascending order ************");
         List<Integer> number = Arrays.asList(10,15,8,49,25,98,98,32,15);
         number.stream().sorted().forEach(System.out::println);
         /*
-        9.Given a list of integers, sort all the values present in it in descending order using Stream functions?
+        10.Given a list of integers, sort all the values present in it in descending order using Stream functions?
          */
         System.out.println("******** printing in descending order ************");
         number.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
         /*
-        10.Find the second Highest element from the Array
+        11.Find the second Highest element from the Array
          */
 
-        System.out.println("******* Printing Second Highest Element ********☺");
+        System.out.println("******* Printing Second Highest Element ********");
         int[] array = {5,9,11,2,8,21,1};
         Integer firstElement = Arrays.stream(array).boxed()
                 .sorted(Collections.reverseOrder())
@@ -180,7 +184,7 @@ public class Java8 {
         System.out.println(firstElement);
 
         /*
-        11.Find the Longest String in the given array
+        12.Find the Longest String in the given array
          */
         System.out.println("******* Printing the Longest String *********");
 
@@ -191,7 +195,7 @@ public class Java8 {
         System.out.println(longestString);
 
         /*
-       12. String.join method
+       13. String.join method
         */
         System.out.println("***** Printing String.join method******");
 
@@ -200,7 +204,7 @@ public class Java8 {
         System.out.println(results);
 
         /*
-       13. Skip and Limit example (2 - 9)
+       14. Skip and Limit example (2 - 9)
          */
         System.out.println("***** Printing Skip() and Limit() ********");
 
@@ -209,14 +213,14 @@ public class Java8 {
                 .limit(8)
                 .forEach(System.out::println);
         /*
-        14.Given an integer array nums, return true if any value appears
+        15.Given an integer array nums, return true if any value appears
         at least twice in the array, and return false if every element is distinct.
          */
         int[] nums = {1,2,3,1};
         System.out.println(Java8.containsDuplicate(nums));
 
         /*
-        15.Write a Java 8 program to concatenate two Streams?
+        16.Write a Java 8 program to concatenate two Streams?
          */
         System.out.println(" ******** Printing Concat Stream ********");
         List<String> l1 = Arrays.asList("Saddam", "Farheen");
@@ -224,12 +228,12 @@ public class Java8 {
         Stream<String> concatStream = Stream.concat(l1.stream(),l2.stream());
         concatStream.forEach(j -> System.out.println(j + " "));
 
-        /* 16.Java 8 program to perform cube on list elements and filter numbers greater than 50.*/
+        /* 17.Java 8 program to perform cube on list elements and filter numbers greater than 50.*/
         System.out.println("********** Printing cube on list and no. > 50 *****");
         myList1.stream().map( k -> k * k * k).filter(m -> m > 50).forEach(System.out::println);
 
         /*
-        17. Write a Java 8 program to sort an array and then convert the sorted array into Stream?
+        18. Write a Java 8 program to sort an array and then convert the sorted array into Stream?
          */
         System.out.println(" ********** Printing sorted with and converted to stream ************");
         int[] ar = { 99, 55, 203, 99, 4, 91 };
@@ -237,7 +241,7 @@ public class Java8 {
         Arrays.stream(ar).forEach(System.out::println);
 
         /*
-        18.How to use map to convert object into Uppercase in Java 8?
+        19.How to use map to convert object into Uppercase in Java 8?
          */
         System.out.println("************ Printing String to Uppper Case ********");
         String[] name = {"saddam", "khan", "farheen", "Safa naaz"};
@@ -247,7 +251,7 @@ public class Java8 {
         System.out.println(nameList);
 
         /*
-        19.Array = {1,3,5,2,8,7,9,10} All the even numbers at start and odd numbers in the last
+        20.Array = {1,3,5,2,8,7,9,10} All the even numbers at start and odd numbers in the last
          */
         System.out.println(" ****** Printing All the even numbers at start and odd numbers in the last *************");
         int[] arr1 = {1,3,5,2,8,7,9,10};
@@ -255,7 +259,7 @@ public class Java8 {
         System.out.println(Arrays.toString(separatedEvenOdd));
 
         /*
-        20.Count even and odd digits in a int nums = 123456;
+        21.Count even and odd digits in a int nums = 123456;
          */
         System.out.println(" ********** Printing Count of even and odd digits *********");
         int num = 123456;

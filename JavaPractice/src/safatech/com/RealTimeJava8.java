@@ -110,8 +110,26 @@ public class RealTimeJava8 {
          years from those employees who are older than 25 years.
          */
         RealTimeJava8.getSeparatedEmpOlderThan_25AndYoungerOrEqualTo_25Years(employeeList);
+        /*
+        Query 3.15 : Who is the oldest employee in the organization?
+         What is his age and which department he belongs to?
+         */
 
+        RealTimeJava8.getOlderEmployee(employeeList);
 
+    }
+    /*
+    Query 3.15 : Who is the oldest employee in the organization?
+     What is his age and which department he belongs to?
+     */
+    public static void getOlderEmployee(List<Employee> employeeList){
+
+        System.out.println("************* Printing the oldest employee in the organization *************");
+        Optional<Employee> optionalEmployee = employeeList.stream().max(Comparator.comparingInt(Employee::getAge));
+        Employee employee = optionalEmployee.get();
+        System.out.println("Name : " + employee.getName());
+        System.out.println("Age : " + employee.getAge());
+        System.out.println("Department : " + employee.getDepartment());
     }
     /*
     Query 3.14 : Separate the employees who are younger or equal to 25 years from
