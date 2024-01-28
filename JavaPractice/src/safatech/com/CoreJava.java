@@ -7,7 +7,7 @@ public class CoreJava{
     public static void main(String[] args) {
 
         /*
-         Rotate the array by k times;
+         1.Rotate the array by k times;
          int[] nums = {1,2,3,4,5,6,7};
          k = 3;
          Output: [5,6,7,1,2,3,4]
@@ -22,28 +22,28 @@ public class CoreJava{
 
 
         /*
-        Printing Isogram or not = Which does not contain any duplicate characters
+        2.Printing Isogram or not = Which does not contain any duplicate characters
          */
         System.out.println();
         System.out.println(CoreJava.isIsogram("codedecode"));
 
         /*
-        Finding the nth element in the Fibonacci series
+        3.Finding the nth element in the Fibonacci series
          */
         System.out.println("******* Finding the n-th element in the Fibonacci series ****");
         System.out.println(CoreJava.fibonacci(10));
 
         /*
-        Find the duplicate Character in a String
+        4.Find the duplicate Character in a String
          */
         System.out.println(CoreJava.findDuplicateUsingFor_Map("codedecode"));
 
         /*
-         // Find the first non-repeating charater's index
+         5.Find the first non-repeating charater's index
          */
-        System.out.println(CoreJava.nonRepeatingCharacter("codec"));
+        System.out.println(CoreJava.nonRepeatingCharacter("ccdec"));
         /*
-         Given an array of integers, return the indices of the two numbers
+         6.Given an array of integers, return the indices of the two numbers
          whose sum is equal to a given target.
          You may assume that each input would have exactly one solution,
           and you may not use the same element twice.
@@ -54,6 +54,37 @@ public class CoreJava{
         int[] nums = {2, 7, 11, 15};
         int target = 9;
         System.out.println(Arrays.toString(CoreJava.twoSum(nums, target)));
+
+         /*
+        7.Count even and odd digits in a int nums = 123456;
+         */
+        System.out.println(" ********** Printing Count of even and odd digits *********");
+        int num = 123456;
+        CoreJava.countEvenOdd(num);
+         /*
+         8.String.join method
+        */
+        System.out.println("***** Printing String.join method ******");
+
+        List<String> nos = Arrays.asList("1","2","3","4");
+        String results = String.join("-", nos);
+        System.out.println(results);
+    }
+    public static void countEvenOdd(int nums){
+
+        int even_count = 0;
+        int odd_count = 0;
+        while(nums > 0){
+
+            int rem = nums % 10;
+            if(rem % 2 == 0){
+                even_count++;
+            }else{
+                odd_count++;
+            }
+            nums = nums / 10;
+        }
+        System.out.println("Even count :" + even_count  + "," + "Odd count : " + odd_count);
     }
     public static int[] twoSum(int[] nums, int target){
 

@@ -195,32 +195,24 @@ public class Java8 {
         System.out.println(longestString);
 
         /*
-       13. String.join method
-        */
-        System.out.println("***** Printing String.join method******");
-
-        List<String> nos = Arrays.asList("1","2","3","4");
-        String results = String.join("-", nos);
-        System.out.println(results);
-
-        /*
-       14. Skip and Limit example (2 - 9)
+       13. Skip and Limit example (2 - 9)
          */
         System.out.println("***** Printing Skip() and Limit() ********");
 
         IntStream.rangeClosed(1,10)
-                .skip(1)
-                .limit(8)
+                .skip(5) // 5 tak skip ( 1, 2, 3, 4 ,5) skip
+                .limit(2) // 2 elemenet print hoga
                 .forEach(System.out::println);
         /*
-        15.Given an integer array nums, return true if any value appears
+        14.Given an integer array nums, return true if any value appears
         at least twice in the array, and return false if every element is distinct.
          */
+        System.out.println(" ******* Printing true or false for duplicate element ********");
         int[] nums = {1,2,3,1};
         System.out.println(Java8.containsDuplicate(nums));
 
         /*
-        16.Write a Java 8 program to concatenate two Streams?
+        15.Write a Java 8 program to concatenate two Streams?
          */
         System.out.println(" ******** Printing Concat Stream ********");
         List<String> l1 = Arrays.asList("Saddam", "Farheen");
@@ -228,20 +220,21 @@ public class Java8 {
         Stream<String> concatStream = Stream.concat(l1.stream(),l2.stream());
         concatStream.forEach(j -> System.out.println(j + " "));
 
-        /* 17.Java 8 program to perform cube on list elements and filter numbers greater than 50.*/
+        /* 16.Java 8 program to perform cube on list elements and filter numbers greater than 50.*/
         System.out.println("********** Printing cube on list and no. > 50 *****");
         myList1.stream().map( k -> k * k * k).filter(m -> m > 50).forEach(System.out::println);
 
         /*
-        18. Write a Java 8 program to sort an array and then convert the sorted array into Stream?
+        17. Write a Java 8 program to sort an array and then convert the sorted array into Stream?
          */
-        System.out.println(" ********** Printing sorted with and converted to stream ************");
+        System.out.println(" ********** Printing sorted array and converted to stream ************");
         int[] ar = { 99, 55, 203, 99, 4, 91 };
-        Arrays.parallelSort(ar);
+        //Arrays.parallelSort(ar);
+        Arrays.sort(ar);
         Arrays.stream(ar).forEach(System.out::println);
 
         /*
-        19.How to use map to convert object into Uppercase in Java 8?
+        18.How to use map to convert object into Uppercase in Java 8?
          */
         System.out.println("************ Printing String to Uppper Case ********");
         String[] name = {"saddam", "khan", "farheen", "Safa naaz"};
@@ -251,35 +244,14 @@ public class Java8 {
         System.out.println(nameList);
 
         /*
-        20.Array = {1,3,5,2,8,7,9,10} All the even numbers at start and odd numbers in the last
+        19.Array = {1,3,5,2,8,7,9,10} All the even numbers at start and odd numbers in the last
          */
         System.out.println(" ****** Printing All the even numbers at start and odd numbers in the last *************");
         int[] arr1 = {1,3,5,2,8,7,9,10};
         int[] separatedEvenOdd = separateEvenOdd(arr1);
         System.out.println(Arrays.toString(separatedEvenOdd));
 
-        /*
-        21.Count even and odd digits in a int nums = 123456;
-         */
-        System.out.println(" ********** Printing Count of even and odd digits *********");
-        int num = 123456;
-        Java8.countEvenOdd(num);
-    }
-    public static void countEvenOdd(int nums){
 
-        int even_count = 0;
-        int odd_count = 0;
-        while(nums > 0){
-
-            int rem = nums % 10;
-            if(rem % 2 == 0){
-                even_count++;
-            }else{
-                odd_count++;
-            }
-            nums = nums / 10;
-        }
-        System.out.println("Even count :" + even_count  + "," + "Odd count : " + odd_count);
     }
     public static int[] separateEvenOdd(int[] arr){
 
@@ -296,6 +268,7 @@ public class Java8 {
     }
 
     public static boolean containsDuplicate(int[] nums){
+
 
         List<Integer> list = Arrays.stream(nums)
                     .boxed()
