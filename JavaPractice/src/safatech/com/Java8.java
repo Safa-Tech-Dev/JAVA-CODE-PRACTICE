@@ -126,7 +126,11 @@ public class Java8 {
 
         System.out.println("****** Max element in the list ************");
         Integer max = myList3.stream().max(Integer::compare).get();
+        int[] array1 = {5,9,11,2,8,21,1};
+        int n = Arrays.stream(array1).boxed().max(Comparator.naturalOrder()).get();
+        int min = Arrays.stream(array1).boxed().min(Comparator.naturalOrder()).get();
         System.out.println(max);
+        System.out.println(min);
 
         // method - 2
         /*
@@ -201,7 +205,7 @@ public class Java8 {
 
         IntStream.rangeClosed(1,10)
                 .skip(5) // 5 tak skip ( 1, 2, 3, 4 ,5) skip
-                .limit(2) // 2 elemenet print hoga
+                .limit(2) // 2 element print hoga
                 .forEach(System.out::println);
         /*
         14.Given an integer array nums, return true if any value appears
@@ -250,9 +254,28 @@ public class Java8 {
         int[] arr1 = {1,3,5,2,8,7,9,10};
         int[] separatedEvenOdd = separateEvenOdd(arr1);
         System.out.println(Arrays.toString(separatedEvenOdd));
+        /*
+        20.List<Integer> l = Arrays.asList(1,1,2,2,2,3,4,5,5);
+        o/p -> 3,4,1,1,5,5,2,2,2
+         */
+        System.out.println(" *********** Printing sorted order based on frequency ********888");
+        List<Integer> list = Arrays.asList(1,1,2,2,2,3,4,5,5);
+        Comparator<Integer> frequencyComparator = Comparator.
+                <Integer,Integer>comparing(e -> Collections.frequency(list, e))
+                .thenComparing(e -> e); // in case of tie, use natural ordering of elements
 
+        list.sort(frequencyComparator);
+        System.out.println(list);
+        /*
+        21.list of string sort based on the length of string
+         */
 
+        List<String> strings = Arrays.asList("apple", "banana", "orange", "kiwi", "grape");
+        List<String> sortedString = strings.stream().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
+        System.out.println(sortedString);
     }
+
+
     public static int[] separateEvenOdd(int[] arr){
 
         return IntStream.concat(
