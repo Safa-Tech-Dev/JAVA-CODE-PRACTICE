@@ -22,7 +22,7 @@ public class CoreJava{
 
 
         /*
-        2.Printing Isogram or not = Which does not contain any duplicate characters
+        2.Printing Isogram or not(Which does not contain any duplicate characters)
          */
         System.out.println();
         System.out.println(CoreJava.isIsogram("codedecode"));
@@ -158,9 +158,9 @@ public class CoreJava{
         }
     }
     static void rotateArray(int[] a, int k){
-        k = k % a.length;
+        k = k % a.length; // 8 % 7 = 1 rotate
         if(k < 0){
-            k = k + a.length;
+            k = k + a.length; //-3 + 7 = 4 rotate
         }
         reverseArray(a, 0, a.length-1); // 7,6,5,4,3,2,1
         reverseArray(a,  0, k -1);//5,6,7,4,3,2,1
