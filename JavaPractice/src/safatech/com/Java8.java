@@ -273,6 +273,23 @@ public class Java8 {
         List<String> strings = Arrays.asList("apple", "banana", "orange", "kiwi", "grape");
         List<String> sortedString = strings.stream().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
         System.out.println(sortedString);
+
+        /*
+        27.write a program in java to add prefix and suffix
+         in a given String
+         */
+        System.out.println("****** Printing String Joiner **********");
+        StringJoiner joiner = new StringJoiner(",","$","$");
+        joiner.add("Java");
+        joiner.add("Interview");
+        joiner.add("Question");
+        System.out.println(joiner);
+        /*
+        Java 8 Program to Print 10 random numbers using forEach?
+         */
+        System.out.println("********* Printing 10 random numbers using forEach ********");
+        Random random = new Random();
+        random.ints().limit(10).forEach(System.out::println);
     }
 
 
