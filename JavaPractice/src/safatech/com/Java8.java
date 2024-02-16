@@ -285,11 +285,19 @@ public class Java8 {
         joiner.add("Question");
         System.out.println(joiner);
         /*
-        Java 8 Program to Print 10 random numbers using forEach?
+        28.Java 8 Program to Print 10 random numbers using forEach?
          */
         System.out.println("********* Printing 10 random numbers using forEach ********");
         Random random = new Random();
         random.ints().limit(10).forEach(System.out::println);
+
+        /*
+        29.Java 8 program to Count Strings whose length is greater than 3 in List?
+         */
+
+        List<String> stringList = Arrays.asList("Hello","Interview","Questions","Answers","Ram","for");
+        long countedString = stringList.stream().filter(str -> str.length() > 3).count();
+        System.out.println(countedString);
     }
 
 
