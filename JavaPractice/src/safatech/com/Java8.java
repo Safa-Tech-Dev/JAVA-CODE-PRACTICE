@@ -1,5 +1,7 @@
 package safatech.com;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -297,7 +299,22 @@ public class Java8 {
 
         List<String> stringList = Arrays.asList("Hello","Interview","Questions","Answers","Ram","for");
         long countedString = stringList.stream().filter(str -> str.length() > 3).count();
-        System.out.println(countedString);
+        System.out.println("Total number of String whose length is > 3: " + countedString);
+        System.out.println("String whose length is > 3");
+        stringList.stream().filter(st -> st.length() > 3).forEach(System.out::println);
+
+        /*
+        30.Calculate the age of Person
+         */
+
+        LocalDate birthDate = LocalDate.parse("1997-04-20");
+        LocalDate currentDate = LocalDate.now();
+        Period period = Period.between(birthDate,currentDate);
+        int years = period.getYears();
+        int months = period.getMonths();
+        int days = period.getDays();
+
+        System.out.println("Years: "+ years + ", months: " + months + ", days: " + days);
     }
 
 
