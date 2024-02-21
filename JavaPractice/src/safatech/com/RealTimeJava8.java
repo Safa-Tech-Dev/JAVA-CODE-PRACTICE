@@ -31,7 +31,7 @@ public class RealTimeJava8 {
         employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0,new Address("Street1",16)));
 
         /*
-        Sort based on Age
+        1.Sort based on Age
          */
         Collections.sort(employeeList,new AgeComparator());
         System.out.println("Sorted based on Ages " + employeeList);
@@ -46,72 +46,72 @@ public class RealTimeJava8 {
 
         System.out.println("***********************************************************************************");
         /*
-      3.1 Find out the count of male and female employees present in the organization?
-     */
+        2.Find out the count of male and female employees present in the organization?
+        */
         System.out.println("******* Printing count of Male and Female employees *****");
         RealTimeJava8.getCountOfMaleFemale(employeeList);
         /*
-         3.2 Print the name of all departments in the organization?
+         3 Print the name of all departments in the organization?
          */
         System.out.println(" ******* Printing the name of all departments ***********");
         RealTimeJava8.getDepartmentName(employeeList);
 
         /*
-        3.3 Find the average age of Male and Female Employees.
+        4 Find the average age of Male and Female Employees.
          */
         System.out.println("Printing average age of Male and Female Employees");
         RealTimeJava8.getAvgAge(employeeList);
          /*
-     3.4 Get the details of highest paid employee in the organization?
-     */
+         5.Get the details of highest paid employee in the organization?
+         */
         RealTimeJava8.getDetailsOfHighestPaidEmployee(employeeList);
 
         /*
-       3.5 Get the names of all employees who have joined after 2015?
+         6. Get the names of all employees who have joined after 2015?
          */
         RealTimeJava8.getNameJoiningDateGT2015(employeeList);
 
         /*
-        3.6 : Count the number of employees in each department?
+        7.Count the number of employees in each department?
          */
         RealTimeJava8.getNumberOfEmpInEachDept(employeeList);
         /*
-        Query 3.7 : What is the average salary of each department?
+        8.What is the average salary of each department?
          */
         RealTimeJava8.getAvgSalaryOfEachDept(employeeList);
         /*
-        Query 3.8 : Get the details of youngest male employee in the product development department?
+        9.Get the details of youngest male employee in the product development department?
          */
         RealTimeJava8.getYoungestMaleEmployeeInProductDevDept(employeeList);
         /*
-        Query 3.9 : Who has the most working experience in the organization?
+        10.Who has the most working experience in the organization?
          */
         RealTimeJava8.getMostWorkingWorkingExpEmp(employeeList);
          /*
-    Query 3.10 : How many male and female employees are there in the sales and marketing team?
-     */
+         11.How many male and female employees are there in the sales and marketing team?
+         */
         RealTimeJava8.getMaleNFemaleEmpInSalesNMarkt(employeeList);
 
         /*
-        Query 3.11 : What is the average salary of male and female employees?
+        12.What is the average salary of male and female employees?
          */
         RealTimeJava8.getAvgSalaryOfMaleNFemale(employeeList);
 
         /*
-        Query 3.12 : List down the names of all employees in each department?
+        13.List down the names of all employees in each department?
          */
         RealTimeJava8.namesOfEmpInEachDept(employeeList);
         /*
-        Query 3.13 : What is the average salary and total salary of the whole organization?
+        14.What is the average salary and total salary of the whole organization?
          */
         RealTimeJava8.avgSalaryAndTotalSalaryOfWholeOrg(employeeList);
         /*
-        Query 3.14 : Separate the employees who are younger or equal to 25
+        15.Separate the employees who are younger or equal to 25
          years from those employees who are older than 25 years.
          */
         RealTimeJava8.getSeparatedEmpOlderThan_25AndYoungerOrEqualTo_25Years(employeeList);
         /*
-        Query 3.15 : Who is the oldest employee in the organization?
+        16.Who is the oldest employee in the organization?
          What is his age and which department he belongs to?
          */
 

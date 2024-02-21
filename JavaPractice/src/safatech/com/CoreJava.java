@@ -69,6 +69,13 @@ public class CoreJava{
         List<String> nos = Arrays.asList("1","2","3","4");
         String results = String.join("-", nos);
         System.out.println(results);
+        /*
+         method to Check For Rotation of String
+        */
+        String originalString = "decode";
+        String toBeChecked = "codede";
+        System.out.println("*********Printing method to Check For Rotation of String ***********");
+        System.out.println(CoreJava.checkForRotation(originalString,toBeChecked));
     }
     public static void countEvenOdd(int nums){
 
@@ -195,6 +202,20 @@ public class CoreJava{
         }
         return isIsogram;
 
+    }
+    /*
+     method to Check For Rotation of String
+     */
+    public static boolean checkForRotation(String originalString, String toBeChecked){
+
+        String concatenatedString = originalString + originalString;
+        return concatenatedString.contains(toBeChecked);
+        /*
+        if(concatenatedString.contains(toBeChecked))
+            return true;
+         else
+            return false;
+         */
     }
 
 }
