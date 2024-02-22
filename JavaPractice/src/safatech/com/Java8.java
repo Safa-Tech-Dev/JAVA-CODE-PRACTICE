@@ -315,6 +315,14 @@ public class Java8 {
         int days = period.getDays();
 
         System.out.println("Years: "+ years + ", months: " + months + ", days: " + days);
+        /*
+        31.Write a program to find the sum of all the digits of a number
+         */
+        System.out.println("****** Printing sum of all the digits ******8");
+        int num = 12345;//15
+        IntStream stream = String.valueOf(num).chars();
+        int sum = stream.map(Character::getNumericValue).sum();
+        System.out.println(sum);
     }
 
 
