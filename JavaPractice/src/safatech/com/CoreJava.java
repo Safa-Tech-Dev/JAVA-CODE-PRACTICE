@@ -82,6 +82,9 @@ public class CoreJava{
          */
         System.out.println(" ************** program to reverse a string without using inbuilt reverse() method *********");
         String name = "Safa Tech";
+        StringBuilder b = new StringBuilder(name);
+
+        System.out.println("Using in-built reverse(): " + b.reverse());
         String reversedString = "";
         for(int i = name.length() - 1; i>= 0; i--){
 
