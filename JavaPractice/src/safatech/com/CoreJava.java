@@ -70,12 +70,24 @@ public class CoreJava{
         String results = String.join("-", nos);
         System.out.println(results);
         /*
-         method to Check For Rotation of String
+         9.method to Check For Rotation of String
         */
         String originalString = "decode";
         String toBeChecked = "codede";
         System.out.println("*********Printing method to Check For Rotation of String ***********");
         System.out.println(CoreJava.checkForRotation(originalString,toBeChecked));
+
+        /*
+        10.Write a program to reverse a string without using inbuilt reverse() method
+         */
+        System.out.println(" ************** program to reverse a string without using inbuilt reverse() method *********");
+        String name = "Safa Tech";
+        String reversedString = "";
+        for(int i = name.length() - 1; i>= 0; i--){
+
+            reversedString = reversedString + name.charAt(i);
+        }
+        System.out.println(reversedString);
     }
     public static void countEvenOdd(int nums){
 
