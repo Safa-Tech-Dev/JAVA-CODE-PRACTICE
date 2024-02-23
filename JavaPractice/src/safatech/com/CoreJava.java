@@ -96,6 +96,11 @@ public class CoreJava{
          */
         System.out.println("************ Printing Left Rotation of String ************");
         System.out.println(CoreJava.leftRotation("decode",2));
+        /*
+        Right Rotation of String
+         */
+        System.out.println("************ Printing Right Rotation of String ************");
+        System.out.println(CoreJava.rightRotation("decode",2));
     }
     public static String leftRotation(String originalString, int rotationFactor){
         /* decode
@@ -104,6 +109,17 @@ public class CoreJava{
         code   + de = codede
          */
         String rotatedString = originalString.substring(rotationFactor) + originalString.substring(0,rotationFactor);
+        return rotatedString;
+    }
+    public static String rightRotation(String originalString, int rotationFactor){
+
+        /* decode
+        partition(p) = length of string(l) - rotationFactor(r) = 6 - 2 = 4
+        sub(p) + sub(0,p)
+        de + deco = dedeco
+         */
+        int partition = originalString.length() - rotationFactor;
+        String rotatedString = originalString.substring(partition) + originalString.substring(0,partition);
         return rotatedString;
     }
     public static void countEvenOdd(int nums){
