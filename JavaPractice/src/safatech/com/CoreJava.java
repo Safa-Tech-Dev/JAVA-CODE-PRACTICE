@@ -91,6 +91,20 @@ public class CoreJava{
             reversedString = reversedString + name.charAt(i);
         }
         System.out.println(reversedString);
+        /*
+        Left Rotation of String
+         */
+        System.out.println("************ Printing Left Rotation of String ************");
+        System.out.println(CoreJava.leftRotation("decode",2));
+    }
+    public static String leftRotation(String originalString, int rotationFactor){
+        /* decode
+        r = 2
+        sub(r)  + sub(0,r)
+        code   + de = codede
+         */
+        String rotatedString = originalString.substring(rotationFactor) + originalString.substring(0,rotationFactor);
+        return rotatedString;
     }
     public static void countEvenOdd(int nums){
 
