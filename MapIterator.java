@@ -5,6 +5,7 @@ public class MapIterator{
 
 	public static void main(String[] args){
 
+		//Create HashMap 
 		Map<Integer, String> companies = new HashMap<>();
 		companies.put(1,"Citi Bank");
 		companies.put(2,"Wells Fargo");
