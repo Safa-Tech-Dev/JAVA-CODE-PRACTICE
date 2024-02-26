@@ -4,12 +4,12 @@ pipeline{
     stages{
         stage('Compile'){
             steps{
-                sh 'javac MapIterator.java'
+                javac MapIterator.java
             }
         }
         stage('Run'){
             steps{
-                sh 'java MapIterator'
+                java MapIterator
             }
         }
     }
