@@ -190,6 +190,14 @@ public class Java8 {
         System.out.println(firstElement);
 
         /*
+        retrieve the last element from a list of strings
+         */
+        System.out.println("****** Printing last element *******");
+        List<String> listOfString = Arrays.asList("One","Two","Three","Four","Five","six");
+        String lastString = listOfString.stream().skip(listOfString.size() - 1).findFirst().get();
+        System.out.println(lastString);
+
+        /*
         17.Find the Longest String in the given array
          */
         System.out.println("******* Printing the Longest String *********");
@@ -323,6 +331,21 @@ public class Java8 {
         IntStream stream = String.valueOf(num).chars();
         int sum = stream.map(Character::getNumericValue).sum();
         System.out.println(sum);
+        /*
+        32.program to reverse each word of string
+         */
+        System.out.println("******** Printing reverse word of each string *************");
+        String inputString = "Hello World this is Java";
+        List<String> reversedString = Arrays.stream(inputString.split(" ")).
+                map(word -> new StringBuilder(word).reverse().toString()).collect(Collectors.toList());
+        System.out.println(reversedString);
+        /*
+        Sorted the string in alphabetical order
+         */
+        System.out.println("*********** Printing sorted string ***********");
+        List<String> fruits = Arrays.asList("Banana","Apple","Cherry","Strawberry","Guava","Orange");
+        List<String> sortedFruits = fruits.stream().sorted().collect(Collectors.toList());
+        System.out.println(sortedFruits);
     }
 
 
