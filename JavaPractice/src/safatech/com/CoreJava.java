@@ -92,15 +92,23 @@ public class CoreJava{
         }
         System.out.println(reversedString);
         /*
-        Left Rotation of String
+        11.Left Rotation of String
          */
         System.out.println("************ Printing Left Rotation of String ************");
         System.out.println(CoreJava.leftRotation("decode",2));
         /*
-        Right Rotation of String
+        12.Right Rotation of String
          */
         System.out.println("************ Printing Right Rotation of String ************");
         System.out.println(CoreJava.rightRotation("decode",2));
+
+        /*
+        13.Write a program to remove all space from string
+         */
+        System.out.println(" ************Printing removed spaces from string ***********");
+        String input = "Onespace twospace threespace fourspace";
+        String removedspaces = input.replaceAll("\\s+", "");
+        System.out.println(removedspaces);
     }
     public static String leftRotation(String originalString, int rotationFactor){
         /* decode
