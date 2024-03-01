@@ -1,10 +1,9 @@
-package safatech.com;
+package com.safatech;
 
-import safatech.com.comparator.*;
+import com.safatech.comparator.*;
+import com.safatech.comparator.*;
 
 import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class RealTimeJava8 {

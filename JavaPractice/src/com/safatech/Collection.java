@@ -1,4 +1,4 @@
-package safatech.com;
+package com.safatech;
 
 import java.io.FileReader;
 import java.util.*;

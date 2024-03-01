@@ -1,4 +1,4 @@
-package safatech.com;
+package com.safatech;
 
 public class Java17 {
     public static void main(String[] args) {

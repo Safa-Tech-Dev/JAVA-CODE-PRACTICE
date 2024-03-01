@@ -1,4 +1,4 @@
-package safatech.com;
+package com.safatech;
 
 import java.time.LocalDate;
 import java.time.Period;

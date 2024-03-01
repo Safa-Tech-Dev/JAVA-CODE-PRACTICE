@@ -1,4 +1,4 @@
-package safatech.com.comparator;
+package com.safatech.comparator;
 
 public class Employee {
 
