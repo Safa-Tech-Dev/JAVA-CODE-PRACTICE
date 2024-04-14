@@ -109,6 +109,44 @@ public class CoreJava{
         String input = "Onespace twospace threespace fourspace";
         String removedspaces = input.replaceAll("\\s+", "");
         System.out.println(removedspaces);
+
+        /*
+        14.Write a program to reverse the array without using the new array
+         */
+        int[] arr2 = {1,2,3,4,5,6};
+        int temp;
+        for(int i = 0; i<arr2.length/2; i++){
+
+            temp = arr2[i];
+            arr2[i] = arr2[arr2.length - 1 - i];
+            arr2[arr2.length - 1 - i] = temp;
+        }
+        System.out.println("*********** Printing reverse the array without using the new array ***********");
+        for(int i = 0; i<arr2.length; i++){
+            System.out.println(arr2[i] + "");
+        }
+
+        /*
+        15.Reverse the word in string
+         */
+
+        String s = "How are you";
+        String[] strArray = s.split(" ");
+        String reversedWord = "";
+
+        for(int i = strArray.length -1; i>=0; i--){
+
+            reversedWord = reversedWord + strArray[i] +" ";
+
+        }
+        System.out.println(reversedWord);
+
+        /*
+        16.checkAnagram
+         */
+        String s1 = "salesmen"; // saleman, danger
+        String s2 = "nameless";// nameless, garden
+        System.out.println(CoreJava.checkAnagram(s1,s2));
     }
     public static String leftRotation(String originalString, int rotationFactor){
         /* decode
@@ -269,6 +307,18 @@ public class CoreJava{
          else
             return false;
          */
+    }
+     // Check Anagram
+    public static boolean checkAnagram(String s1, String s2){
+
+        System.out.println("**************** Checking Anagram **************");
+        char[] a1 = s1.toCharArray();
+        char[] a2 = s2.toCharArray();
+        if(s1.length() != s2.length())
+            return false;
+        Arrays.sort(a1);
+        Arrays.sort(a2);
+        return a1.equals(a2);
     }
 
 }

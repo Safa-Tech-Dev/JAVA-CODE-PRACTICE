@@ -1,4 +1,4 @@
-package com.safatech.thread;
+package com.safatech.thread1;
 
 public class Company {
 

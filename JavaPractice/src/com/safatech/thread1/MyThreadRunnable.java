@@ -1,4 +1,4 @@
-package com.safatech.thread;
+package com.safatech.thread1;
 
 class MyThreadClass1 implements Runnable{
     public void run(){

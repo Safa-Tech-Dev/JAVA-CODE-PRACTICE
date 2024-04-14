@@ -1,9 +1,9 @@
-package com.safatech.thread;
+package com.safatech.thread1;
 class UserThread extends Thread{
 
     public void run(){
 
-        System.out.println("task for user defined thread...");
+        System.out.println("task for user defined thread1...");
     }
 }
 public class ThreadOperation {
@@ -15,7 +15,7 @@ public class ThreadOperation {
 
         Thread t = Thread.currentThread();
         String tName = t.getName();
-        System.out.println("Current runninng thread: " + tName);
+        System.out.println("Current runninng thread1: " + tName);
         t.setName("MyThread");
         System.out.println(t.getName());
         try{

@@ -1,6 +1,5 @@
-package com.safatech;
+package com.safatech.java8;
 
-import com.safatech.comparator.*;
 import com.safatech.comparator.*;
 
 import java.util.*;

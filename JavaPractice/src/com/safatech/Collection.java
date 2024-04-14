@@ -6,10 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Collection {
 
-
     public static void main(String[] args) {
-
-
         //How can you make an ArrayList read-only
         System.out.println("****** ArrayList Read Only ***********");
         try{
@@ -54,7 +51,7 @@ public class Collection {
         }
         //method - 2 (Using CopyOnWriteArrayList)
 
-        //Creating a thread-safe ArrayList
+        //Creating a thread1-safe ArrayList
         System.out.println("******* Using CopyOnWriteArrayList ********");
         CopyOnWriteArrayList<String> syn_list = new CopyOnWriteArrayList<>();
 
@@ -82,9 +79,10 @@ public class Collection {
         hashtable.put("6","Saturday");
         hashtable.put("7","Sunday");
         Enumeration<String> enumeration_hash_table = hashtable.elements();
-        while (enumeration_hash_table.hasMoreElements()){
+        while (enumeration_hash_table.hasMoreElements()) {
             System.out.println(enumeration_hash_table.nextElement());// not in order
 
+        }
             /*
             program to shuffle all the elements of a collection in Java.
              */
@@ -156,6 +154,6 @@ public class Collection {
             joined_list.addAll(list_1);
             joined_list.addAll(list_2);
             System.out.println("Printing joined ArrayList : " + joined_list);
-        }
+
      }
 }
