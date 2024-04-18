@@ -147,7 +147,41 @@ public class CoreJava{
         String s1 = "salesmen"; // saleman, danger
         String s2 = "nameless";// nameless, garden
         System.out.println(CoreJava.checkAnagram(s1,s2));
+
+       /* 31.Write a program to find the sum of all the digits of a number
+         */
+        System.out.println("****** Printing sum of all the digits ******8");
+        int num1 = 12345;//15
+
+        System.out.println(CoreJava.findSumOfAllDigit(num1));
+
+        System.out.println("****************** Printing Kth largest Element *********************");
+        int[] arr1 = {4,2,9,7,5,6,7,1,3};
+        int k1 = 4;
+        System.out.println(CoreJava.findKthLargestElement(arr1,k1));
+
     }
+
+    public static int findKthLargestElement(int[] arr, int k){
+
+        Arrays.sort(arr); // {4,2,9,7,5,6,7,1,3} => sorted => 1,2,3,4,5,6,7,7,9
+
+        return arr[arr.length - k]; // arr[9- 4 ] => arr[5] => 6
+    }
+
+    private static int findSumOfAllDigit(int num1) {
+
+        int sum = 0;
+        int rem;
+        while(num1 > 0){
+
+            rem = num1 % 10;
+            sum += rem;
+            num1 = num1 / 10;
+        }
+        return sum;
+    }
+
     public static String leftRotation(String originalString, int rotationFactor){
         /* decode
         r = 2

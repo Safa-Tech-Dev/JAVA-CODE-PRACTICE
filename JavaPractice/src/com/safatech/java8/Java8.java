@@ -181,7 +181,7 @@ public class Java8 {
          */
 
         System.out.println("******* Printing Second Highest Element ********");
-        int[] array = {5,9,11,2,8,21,1};
+        int[] array = {5,9,11,2,8,21,1}; // also check coreJava code
         Integer firstElement = Arrays.stream(array).boxed()
                 .sorted(Collections.reverseOrder())
                 .skip(1)
@@ -326,7 +326,7 @@ public class Java8 {
         /*
         31.Write a program to find the sum of all the digits of a number
          */
-        System.out.println("****** Printing sum of all the digits ******8");
+        System.out.println("****** Printing sum of all the digits ******");
         int num = 12345;//15
         IntStream stream = String.valueOf(num).chars();
         int sum = stream.map(Character::getNumericValue).sum();
