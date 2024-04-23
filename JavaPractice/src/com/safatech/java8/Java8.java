@@ -268,10 +268,10 @@ public class Java8 {
         25.List<Integer> l = Arrays.asList(1,1,2,2,2,3,4,5,5);
         o/p -> 3,4,1,1,5,5,2,2,2
          */
-        System.out.println(" *********** Printing sorted order based on frequency ********888");
+        System.out.println(" *********** Printing sorted order based on frequency ********");
         List<Integer> list = Arrays.asList(1,1,2,2,2,3,4,5,5);
         Comparator<Integer> frequencyComparator = Comparator.
-                <Integer,Integer>comparing(e -> Collections.frequency(list, e))
+                <Integer,Integer>comparing(e -> Collections.frequency(list, e)) //(1,1= 2, 2,2,2=3, 3=1, 4=1, 5,5=2)
                 .thenComparing(e -> e); // in case of tie, use natural ordering of elements
 
         list.sort(frequencyComparator);

@@ -39,6 +39,12 @@ public class CoreJava{
         System.out.println(CoreJava.findDuplicateUsingFor_Map("codedecode"));
 
         /*
+        Remove the duplicates character from the string and print the string
+        */
+
+        System.out.println(CoreJava.removeDuplicateCharacter("saddam"));
+
+        /*
          5.Find the first non-repeating charater's index
          */
         System.out.println(CoreJava.nonRepeatingCharacter("ccdec"));
@@ -253,6 +259,22 @@ public class CoreJava{
                 duplicates.add(entry.getKey());
         }
         return duplicates;
+    }
+    /*
+    Remove the duplicates character from the string and print the string
+     */
+    public static String removeDuplicateCharacter(String str){
+        System.out.println("************ Printing removed duplicates string ***************");
+        Set<Character> characterSet = new HashSet<>();
+        StringBuffer sb = new StringBuffer();
+        for(int i = 0; i < str.length(); i++){
+            Character ch = str.charAt(i);
+            if(!characterSet.contains(ch)){
+                characterSet.add(ch);
+                sb.append(ch);
+            }
+        }
+        return sb.toString();
     }
 
     // Find the first non-repeating charater's index
