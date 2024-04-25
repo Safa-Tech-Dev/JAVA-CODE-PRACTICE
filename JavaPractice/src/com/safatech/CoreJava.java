@@ -1,7 +1,6 @@
 package com.safatech;
 
 import java.util.*;
-
 public class CoreJava{
 
     public static void main(String[] args) {
@@ -136,6 +135,7 @@ public class CoreJava{
         15.Reverse the word in string
          */
 
+        System.out.println(" ***************** Printing he reversed string **************");
         String s = "How are you";
         String[] strArray = s.split(" ");
         String reversedWord = "";
@@ -166,6 +166,29 @@ public class CoreJava{
         int k1 = 4;
         System.out.println(CoreJava.findKthLargestElement(arr1,k1));
 
+        /*
+        Check the String is Palindrome or not
+        1.reverse the string and check with the original string
+        2. if contains equal , palindrom otherwise not palindrom
+         */
+
+        String originalString2 = "Mom"; // java
+        CoreJava.checkPalindrom(originalString2);
+    }
+
+    public static void checkPalindrom(String originalString2) {
+
+        System.out.println(" ***** Printing Palindrom or not *************");
+        String reversedString = "";
+        for(int i = originalString2.length() - 1; i>= 0 ; i--){
+            reversedString = reversedString + originalString2.charAt(i);
+
+        }
+        if(originalString2.equalsIgnoreCase(reversedString)){
+            System.out.println("Palindrom...");
+        }else{
+            System.out.println("Not Palindrom...");
+        }
     }
 
     public static int findKthLargestElement(int[] arr, int k){
