@@ -46,7 +46,7 @@ public class CoreJava{
         /*
          5.Find the first non-repeating charater's index
          */
-        System.out.println(CoreJava.nonRepeatingCharacter("ccdec"));
+        System.out.println(CoreJava.nonRepeatingCharacter("aabkkhh"));
         /*
          6.Given an array of integers, return the indices of the two numbers
          whose sum is equal to a given target.
@@ -301,24 +301,25 @@ public class CoreJava{
     }
 
     // Find the first non-repeating charater's index
-    public static int nonRepeatingCharacter(String s){
+    public static char nonRepeatingCharacter(String s){
 
-        System.out.println("***** Printing the first non-repeating charater's Index ******");
-        Map<Character, Integer> mapCount = new HashMap<>();
-        for (int i = 0; i<s.length(); i++){
-            if(mapCount.containsKey(s.charAt(i))){
-                mapCount.put(s.charAt(i), mapCount.get(s.charAt(i)) + 1);
+        System.out.println("***** Printing the first non-repeating charater ******");
+        Map<Character, Integer> mapCount = new LinkedHashMap<>();
+        char[] charArray = s.toCharArray();
+        for (char ch : charArray){
+            if(mapCount.containsKey(ch)){
+                mapCount.put(ch, mapCount.get(ch) + 1);
             }else{
-                mapCount.put(s.charAt(i), 1);
+                mapCount.put(ch, 1);
             }
         }
         for(Map.Entry<Character, Integer> entry : mapCount.entrySet()){
 
             if(entry.getValue() == 1){
-                return entry.getValue();
+                return entry.getKey();
             }
         }
-        return -1;
+        throw new RuntimeException("No character found...");
     }
     /*
     reverse the array
