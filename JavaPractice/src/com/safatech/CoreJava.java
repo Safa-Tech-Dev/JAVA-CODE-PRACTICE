@@ -174,6 +174,28 @@ public class CoreJava{
 
         String originalString2 = "Mom"; // java
         CoreJava.checkPalindrom(originalString2);
+
+        /*
+        Program to remove/ delete the element from the array
+         */
+        int[] originalArray = {1,2,3,4,5};
+        int elementToRemove = 3;
+        System.out.println("**** Printing the Removed Array ************");
+        System.out.println("Original Array " + Arrays.toString(originalArray));
+        System.out.println("Element removed: " + Arrays.toString(CoreJava.remove(originalArray,elementToRemove)));
+    }
+
+    public static int[] remove(int[] array, int elementToRemove) {
+
+        int[] newArray = new int[array.length-1];
+        int index = 0;
+        for(int i = 0; i< array.length; i++){
+            if(array[i] != elementToRemove){
+                newArray[index] = array[i];
+                index++;
+            }
+        }
+        return newArray;
     }
 
     public static void checkPalindrom(String originalString2) {
