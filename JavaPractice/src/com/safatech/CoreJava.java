@@ -183,6 +183,24 @@ public class CoreJava{
         System.out.println("**** Printing the Removed Array ************");
         System.out.println("Original Array " + Arrays.toString(originalArray));
         System.out.println("Element removed: " + Arrays.toString(CoreJava.remove(originalArray,elementToRemove)));
+
+        /*
+        Write a program to print the even length string
+        e.g Hell world we lol
+        o/p - hell , we
+         */
+        String givenString = " Hell World We lol";
+        CoreJava.getEvenString(givenString);
+    }
+
+    public static void getEvenString(String givenString) {
+
+        System.out.println("******** Printing Even Length String ********");
+        for(String s : givenString.split(" ")){
+            if(s.length() % 2 == 0){
+                System.out.println(s);
+            }
+        }
     }
 
     public static int[] remove(int[] array, int elementToRemove) {
