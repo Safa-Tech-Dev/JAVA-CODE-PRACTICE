@@ -1,5 +1,5 @@
 package com.safatech.thread1;
-
+//Example of interrupting a thread that stops working
 public class TestInterruptingThread1 extends Thread{
 
     public void run(){
