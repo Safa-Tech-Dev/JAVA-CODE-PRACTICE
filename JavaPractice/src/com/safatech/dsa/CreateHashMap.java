@@ -8,11 +8,11 @@ import java.util.LinkedList;
  * Output
  * [null, null, null, 1, -1, null, 1, null, -1]
  */
-class MyHashMap {
+class CreateHashMap {
 
     private static final int BUCKET_SIZE = 10000; // Define the size of the hash table
     private LinkedList<Entry>[] buckets;
-    public MyHashMap() {
+    public CreateHashMap() {
 
         buckets = new LinkedList[BUCKET_SIZE];
 
@@ -24,7 +24,7 @@ class MyHashMap {
     }
     public static void main(String[] args){
 
-        MyHashMap myHashMap = new MyHashMap();
+        CreateHashMap myHashMap = new CreateHashMap();
         myHashMap.put(1, 1); // The map is now [[1,1]]
         myHashMap.put(2, 2); // The map is now [[1,1], [2,2]]
         myHashMap.get(1);    // return 1, The map is now [[1,1], [2,2]]

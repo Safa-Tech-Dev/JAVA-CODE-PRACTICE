@@ -9,12 +9,12 @@ import java.util.LinkedList;
  * Output
  * [null, null, null, true, false, null, true, null, false]
  */
-class MyHashSet {
+class CreateHashSet {
 
     private static final int BUCKET_SIZE = 1000; // Define the size of the Hash Table
     private LinkedList<Integer>[] buckets;
 
-    public MyHashSet() {
+    public CreateHashSet() {
 
         buckets = new LinkedList[BUCKET_SIZE];
         for(int i = 0; i< BUCKET_SIZE; i++){
@@ -62,7 +62,7 @@ class MyHashSet {
 
     public static void main(String[] args){
 
-        MyHashSet myHashSet = new MyHashSet();
+        CreateHashSet myHashSet = new CreateHashSet();
 
         myHashSet.add(1);      // set = [1]
         myHashSet.add(2);      // set = [1, 2]
