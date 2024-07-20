@@ -145,8 +145,8 @@ public class Java8 {
          */
         System.out.println("*******Printing Each characters count*********");
         String s = "ILoveDawateIslami";
-        Map<String, Long> map = Arrays.stream(s.split(""))
-                .map(String::toLowerCase)
+        Map<String, Long> map = Arrays.stream(s.split("")) // step - 1 -> split the string and convert to stream of Arrays
+                .map(String::toLowerCase) // step - 2 -> convert all character to lowercase
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(map);
         /*
