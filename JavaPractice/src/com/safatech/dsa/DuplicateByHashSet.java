@@ -1,31 +1,25 @@
 package com.safatech.dsa;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class DuplicateByHashSet {
 
     public static void main(String[] args) {
 
-        List<Integer> listOfNums = new ArrayList<>();
-        listOfNums.add(12);
-        listOfNums.add(1);
-        listOfNums.add(12);
-        listOfNums.add(25);
-        System.out.println(DuplicateByHashSet.findDuplicates(listOfNums));
+        int[] nums = {1,2,3,1};
+        System.out.println(DuplicateByHashSet.findDuplicates(nums));
     }
 
-    private static boolean findDuplicates(List<Integer> keys) {
+    private static boolean findDuplicates(int[] nums) {
 
         Set<Integer> set = new HashSet<>();
 
-        for (Integer i : keys){
-            if(set.contains(i)){
-                return true;
+        for (int i = 0; i< nums.length; i++){
+            if(set.contains(nums[i])){ // check if the element is there in set or not
+                return true; // if there return true
             }
-            set.add(i);
+            set.add(nums[i]);     // else add to set
         }
         return false;
 
