@@ -1,4 +1,4 @@
-package com.safatech.thread1;
+package com.safatech.thread;
 //Example of interrupting the thread that behaves normally
 public class TestInterruptingThread3 extends Thread{
 

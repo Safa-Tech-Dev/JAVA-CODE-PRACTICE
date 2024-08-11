@@ -1,4 +1,4 @@
-package com.safatech.thread1;
+package com.safatech.thread;
 
 public class TestJoinMethod2 extends Thread{
 

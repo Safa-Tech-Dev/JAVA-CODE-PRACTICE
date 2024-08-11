@@ -1,4 +1,4 @@
-package com.safatech.thread1;
+package com.safatech.thread;
 
 public class DeadlockSolved {
 

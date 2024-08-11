@@ -1,4 +1,4 @@
-package com.safatech.thread1;
+package com.safatech.thread;
 // interrupted and interrupt method
 public class TestInterruptingThread4 extends Thread{
 

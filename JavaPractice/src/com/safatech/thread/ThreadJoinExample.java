@@ -1,4 +1,4 @@
-package com.safatech.thread1;
+package com.safatech.thread;
 
 //A program for understanding joining of tread
 class ThreadJoin extends Thread{

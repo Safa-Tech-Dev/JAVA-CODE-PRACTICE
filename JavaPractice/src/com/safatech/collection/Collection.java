@@ -51,7 +51,7 @@ public class Collection {
         }
         //method - 2 (Using CopyOnWriteArrayList)
 
-        //Creating a thread1-safe ArrayList
+        //Creating a thread-safe ArrayList
         System.out.println("******* Using CopyOnWriteArrayList ********");
         CopyOnWriteArrayList<String> syn_list = new CopyOnWriteArrayList<>();
 
