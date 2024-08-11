@@ -1,4 +1,4 @@
-package com.safatech;
+package com.safatech.collection;
 
 import java.io.FileReader;
 import java.util.*;

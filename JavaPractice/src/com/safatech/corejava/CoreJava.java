@@ -1,4 +1,4 @@
-package com.safatech;
+package com.safatech.corejava;
 
 import java.util.*;
 public class CoreJava{

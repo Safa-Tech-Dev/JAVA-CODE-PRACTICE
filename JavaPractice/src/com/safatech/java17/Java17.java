@@ -1,4 +1,4 @@
-package com.safatech;
+package com.safatech.java17;
 
 public class Java17 {
     public static void main(String[] args) {
