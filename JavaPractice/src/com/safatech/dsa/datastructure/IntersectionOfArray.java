@@ -1,4 +1,4 @@
-package com.safatech.dsa;
+package com.safatech.dsa.datastructure;
 
 import java.util.Arrays;
 import java.util.HashSet;

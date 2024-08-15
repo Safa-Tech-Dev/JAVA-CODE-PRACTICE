@@ -1,4 +1,4 @@
-package com.safatech.dsa;
+package com.safatech.dsa.datastructure;
 
 /**
  * Given a non-empty array of integers nums, every element appears twice except for one.

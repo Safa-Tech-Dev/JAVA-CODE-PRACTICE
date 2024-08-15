@@ -48,18 +48,6 @@ public class CoreJava{
          5.Find the first non-repeating charater's index
          */
         System.out.println(CoreJava.nonRepeatingCharacter("aabkkhh"));
-        /*
-         6.Given an array of integers, return the indices of the two numbers
-         whose sum is equal to a given target.
-         You may assume that each input would have exactly one solution,
-          and you may not use the same element twice.
-          Given nums = [2, 7, 11, 15], target = 9
-          The output should be [0, 1].
-          Because nums[0] + nums[1] = 2 + 7 = 9
-         */
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
-        System.out.println(Arrays.toString(CoreJava.twoSum(nums, target)));
 
          /*
         7.Count even and odd digits in a int nums = 123456;
@@ -287,20 +275,6 @@ public class CoreJava{
             nums = nums / 10;
         }
         System.out.println("Even count :" + even_count  + "," + "Odd count : " + odd_count);
-    }
-    public static int[] twoSum(int[] nums, int target){
-
-        System.out.println("+++++++++++++ Printing Two Sum +++++++++");
-        Map<Integer, Integer> m = new HashMap<>();
-        for(int i = 0; i< nums.length; i++){
-            int complement = target - nums[i];
-            if(m.containsKey(complement) && m.get(complement) != i){
-                return new int[]{m.get(complement),i};
-            }else{
-                m.put(nums[i],i);
-            }
-        }
-        return new int[] {};
     }
 
     public static Set<Character> findDuplicateUsingFor_Map(String name){
