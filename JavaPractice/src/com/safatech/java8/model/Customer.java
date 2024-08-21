@@ -1,6 +1,7 @@
 package com.safatech.java8.model;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Customer {
 
@@ -27,8 +28,8 @@ public class Customer {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Optional<String> getName() {
+        return Optional.ofNullable(name);
     }
 
     public void setName(String name) {
