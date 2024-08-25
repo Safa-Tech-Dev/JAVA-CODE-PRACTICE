@@ -4,15 +4,17 @@ public class Employee {
     private int id;
     private String name;
     private String dept;
+    private String grade;
     private long salary;
 
     public Employee() {
     }
 
-    public Employee(int id, String name, String dept, long salary) {
+    public Employee(int id, String name, String dept, String grade,long salary) {
         this.id = id;
         this.name = name;
         this.dept = dept;
+        this.grade = grade;
         this.salary = salary;
     }
 
@@ -40,6 +42,14 @@ public class Employee {
         this.dept = dept;
     }
 
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
     public long getSalary() {
         return salary;
     }
@@ -54,6 +64,7 @@ public class Employee {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", dept='" + dept + '\'' +
+                ", grade='" + grade + '\'' +
                 ", salary=" + salary +
                 '}';
     }

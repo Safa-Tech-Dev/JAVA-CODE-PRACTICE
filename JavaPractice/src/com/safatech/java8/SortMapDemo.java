@@ -30,11 +30,11 @@ public class SortMapDemo {
 
         Map<Employee, Integer> employeeMap1 = new TreeMap<>(new EmployeeComparator());// traditional approach
         Map<Employee, Integer> employeeMap = new TreeMap<>((o1,o2) -> (int) (o2.getSalary() - o1.getSalary()));// lambda approach
-        employeeMap.put(new Employee(176, "Roshan" , "IT", 600000),60);
-        employeeMap.put(new Employee(388, "Sputam" , "ECE", 1000000),90);
-        employeeMap.put(new Employee(378, "Aquib" , "CSE", 500000),50);
-        employeeMap.put(new Employee(889, "Shahbaz" , "Customer support", 400000),40);
-        employeeMap.put(new Employee(569, "Asif" , "ECE", 1200000),120);
+        employeeMap.put(new Employee(176, "Roshan" , "IT", "A", 600000),60);
+        employeeMap.put(new Employee(388, "Sputam" , "ECE", "B",1000000),90);
+        employeeMap.put(new Employee(378, "Aquib" , "CSE", "A",500000),50);
+        employeeMap.put(new Employee(889, "Shahbaz" , "Customer support", "A",400000),40);
+        employeeMap.put(new Employee(569, "Asif" , "ECE","C",1200000),120);
         // System.out.println(employeeMap);
 
         employeeMap.entrySet().stream() // Stream API

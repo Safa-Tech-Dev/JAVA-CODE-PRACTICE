@@ -198,16 +198,6 @@ public class Java8 {
         System.out.println(lastString);
 
         /*
-        17.Find the Longest String in the given array
-         */
-        System.out.println("******* Printing the Longest String *********");
-
-        String[] strArray = {"Java", "Springboot", "microservices","DockerHubKubernetes","Amazon Web Services"};
-        String longestString = Arrays.stream(strArray)
-                .reduce((word1, word2) -> word1.length() > word2.length() ? word1 : word2)
-                .get();
-        System.out.println(longestString);
-
         /*
        18. Skip and Limit example (2 - 9)
          */
