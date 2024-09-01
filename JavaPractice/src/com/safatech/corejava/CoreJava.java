@@ -44,11 +44,6 @@ public class CoreJava{
 
         System.out.println(CoreJava.removeDuplicateCharacter("saddam"));
 
-        /*
-         5.Find the first non-repeating charater's index
-         */
-        System.out.println(CoreJava.nonRepeatingCharacter("aabkkhh"));
-
          /*
         7.Count even and odd digits in a int nums = 123456;
          */
@@ -315,27 +310,7 @@ public class CoreJava{
         return sb.toString();
     }
 
-    // Find the first non-repeating charater's index
-    public static char nonRepeatingCharacter(String s){
 
-        System.out.println("***** Printing the first non-repeating charater ******");
-        Map<Character, Integer> mapCount = new LinkedHashMap<>();
-        char[] charArray = s.toCharArray();
-        for (char ch : charArray){
-            if(mapCount.containsKey(ch)){
-                mapCount.put(ch, mapCount.get(ch) + 1);
-            }else{
-                mapCount.put(ch, 1);
-            }
-        }
-        for(Map.Entry<Character, Integer> entry : mapCount.entrySet()){
-
-            if(entry.getValue() == 1){
-                return entry.getKey();
-            }
-        }
-        throw new RuntimeException("No character found...");
-    }
     /*
     reverse the array
      */
