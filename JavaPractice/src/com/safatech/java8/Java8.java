@@ -11,16 +11,6 @@ import java.util.stream.Stream;
 public class Java8 {
 
     public static void main(String[] args) {
-        /*
-        1. Given a list of integers,
-        find out all the even numbers that exist in the list using Stream functions
-         */
-        System.out.println("************ find all even numbers ************");
-        Integer[] arr = {1,1,3,6,0,7,-8,-1,-3};
-        List<Integer> myList1 = Arrays.asList(arr);
-        List<Integer> evenList = myList1.stream().filter(i -> i % 2 == 0 ).collect(Collectors.toList());
-        System.out.println(evenList);
-        myList1.stream().filter(i -> i % 2 == 0).forEach(System.out::println);
 
         /*
         2. Given a list of integers, find out all the numbers starting with 1 using Stream functions?
@@ -226,7 +216,7 @@ public class Java8 {
 
         /* 21.Java 8 program to perform cube on list elements and filter numbers greater than 50.*/
         System.out.println("********** Printing cube on list and no. > 50 *****");
-        myList1.stream().map( k -> k * k * k).filter(m -> m > 50).forEach(System.out::println);
+//myList1.stream().map( k -> k * k * k).filter(m -> m > 50).forEach(System.out::println);
 
         /*
         22. Write a Java 8 program to sort an array and then convert the sorted array into Stream?
