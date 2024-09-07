@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure;
+package com.safatech.dsa.datastructure.hashmap;
 
 import java.util.LinkedList;
 /**
