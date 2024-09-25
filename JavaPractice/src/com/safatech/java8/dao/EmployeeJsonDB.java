@@ -1,3 +1,4 @@
+/*
 package com.safatech.java8.dao;
 
 import com.safatech.java8.model.EmployeeJson;
@@ -21,3 +22,4 @@ public class EmployeeJsonDB {
        return null;
     }
 }
+*/
