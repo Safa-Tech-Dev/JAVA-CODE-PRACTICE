@@ -1,4 +1,4 @@
-/*
+
 package com.safatech.java8.dao;
 
 import com.safatech.java8.model.EmployeeJson;
@@ -9,7 +9,8 @@ import java.util.List;
 
 public class EmployeeJsonDB {
 
-    public static git List<EmployeeJson> fetchEmployee(){
+    public static List<EmployeeJson> fetchEmployee(){
+        /*
         ObjectMapper mapper = new ObjectMapper();
        try {
            return
@@ -19,7 +20,13 @@ public class EmployeeJsonDB {
         }catch (IOException e){
            e.printStackTrace();
        }
+
+         */
        return null;
+
+
     }
+
+
 }
-*/
+
