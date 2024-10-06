@@ -166,37 +166,7 @@ public class Java8 {
          */
         System.out.println("******** printing in descending order ************");
         number.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
-        /*
-        16.Find the second Highest element from the Array
-         */
 
-        System.out.println("******* Printing Second Highest Element ********");
-        int[] array = {5,9,11,2,8,21,1}; // also check coreJava code
-        Integer firstElement = Arrays.stream(array).boxed()
-                .sorted(Collections.reverseOrder())
-                .skip(1)
-                .findFirst()
-                .get();
-        System.out.println(firstElement);
-
-        /*
-        retrieve the last element from a list of strings
-         */
-        System.out.println("****** Printing last element *******");
-        List<String> listOfString = Arrays.asList("One","Two","Three","Four","Five","six");
-        String lastString = listOfString.stream().skip(listOfString.size() - 1).findFirst().get();
-        System.out.println(lastString);
-
-        /*
-        /*
-       18. Skip and Limit example (2 - 9)
-         */
-        System.out.println("***** Printing Skip() and Limit() ********");
-
-        IntStream.rangeClosed(1,10)
-                .skip(5) // 5 tak skip ( 1, 2, 3, 4 ,5) skip
-                .limit(2) // 2 element print hoga
-                .forEach(System.out::println);
         /*
         19.Given an integer array nums, return true if any value appears
         at least twice in the array, and return false if every element is distinct.
