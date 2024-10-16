@@ -1,5 +1,8 @@
-package com.safatech.dsa.datastructure.array;
+package com.safatech.dsa.datastructure.array.pattern.targetsum;
 
+/**
+ * count no. of triplets in the array whose sum is equal to the given value x.
+ */
 public class TripletSum {
 
     public static int tripletSum(int[] arr, int target){
