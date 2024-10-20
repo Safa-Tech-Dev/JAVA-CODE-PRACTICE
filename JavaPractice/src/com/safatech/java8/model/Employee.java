@@ -18,6 +18,12 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Employee(int id, String name, long salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
     public int getId() {
         return id;
     }
@@ -67,5 +73,9 @@ public class Employee {
                 ", grade='" + grade + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+    public void getEmployeeInfo(){
+        System.out.println("I am a method in Employee Class.");
     }
 }
