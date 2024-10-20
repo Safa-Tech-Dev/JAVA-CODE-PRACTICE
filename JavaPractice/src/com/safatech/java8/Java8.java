@@ -12,10 +12,8 @@ public class Java8 {
 
     public static void main(String[] args) {
 
-        /*
-        2. Given a list of integers, find out all the numbers starting with 1 using Stream functions?
-         */
-        System.out.println("******* find all the number starting with 1");
+
+
         List<Integer> myList2 = Arrays.asList(10,12,15,8,9,7,5);
         myList2.stream().map(s -> s + "") // converting to string
                 .filter( i -> i.startsWith("1")).forEach( i -> System.out.println(i));
