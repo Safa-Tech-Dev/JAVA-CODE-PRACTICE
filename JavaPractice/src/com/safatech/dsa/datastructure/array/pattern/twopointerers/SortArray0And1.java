@@ -1,5 +1,10 @@
 package com.safatech.dsa.datastructure.array.pattern.twopointerers;
 
+/**
+ * Problem 1 : Move 0 to the left and 1 to the right
+ * input : 1,0,1,0,1,0,1,0,1,0
+ * output : 0 0 0 0 0 1 1 1 1 1
+ */
 public class SortArray {
 
     public static void print(int[] arr){
