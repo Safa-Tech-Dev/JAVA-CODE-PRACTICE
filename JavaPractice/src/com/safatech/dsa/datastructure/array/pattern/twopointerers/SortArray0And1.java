@@ -5,7 +5,7 @@ package com.safatech.dsa.datastructure.array.pattern.twopointerers;
  * input : 1,0,1,0,1,0,1,0,1,0
  * output : 0 0 0 0 0 1 1 1 1 1
  */
-public class SortArray {
+public class SortArray0And1 {
 
     public static void print(int[] arr){
 
