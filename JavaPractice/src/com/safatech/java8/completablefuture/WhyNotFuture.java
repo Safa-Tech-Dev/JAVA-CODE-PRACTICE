@@ -1,4 +1,4 @@
-package com.safatech.java8;
+package com.safatech.java8.completablefuture;
 
 import java.util.ArrayList;
 import java.util.Arrays;

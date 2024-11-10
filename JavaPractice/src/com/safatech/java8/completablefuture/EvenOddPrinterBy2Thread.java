@@ -1,6 +1,4 @@
-package com.safatech.java8;
-
-import java.util.stream.IntStream;
+package com.safatech.java8.completablefuture;
 
 public class EvenOddPrinterBy2Thread implements Runnable{
 

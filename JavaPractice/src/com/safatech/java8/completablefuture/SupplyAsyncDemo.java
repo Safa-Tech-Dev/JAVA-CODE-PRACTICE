@@ -1,4 +1,4 @@
-package com.safatech.java8;
+package com.safatech.java8.completablefuture;
 
 import com.safatech.java8.dao.EmployeeJsonDB;
 import com.safatech.java8.model.EmployeeJson;

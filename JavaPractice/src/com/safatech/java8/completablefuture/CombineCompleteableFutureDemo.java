@@ -1,10 +1,8 @@
-package com.safatech.java8;
+package com.safatech.java8.completablefuture;
 
 import com.safatech.java8.dao.EmployeeJsonDB;
-import com.safatech.java8.model.Employee;
 import com.safatech.java8.model.EmployeeJson;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
