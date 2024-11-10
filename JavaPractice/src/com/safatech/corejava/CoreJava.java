@@ -19,14 +19,6 @@ public class CoreJava{
         for(int i = 0; i< arr.length; i++){
             System.out.print(arr[i]+ " ");
         }
-
-
-        /*
-        2.Printing Isogram or not(Which does not contain any duplicate characters)
-         */
-        System.out.println();
-        System.out.println(CoreJava.isIsogram("codedecode"));
-
         /*
         3.Finding the nth element in the Fibonacci series
          */
@@ -344,25 +336,6 @@ public class CoreJava{
             return n;
         else
             return fibonacci(n-1) + fibonacci(n-2);
-    }
-
-    /*
-    Check whether string is a Isogram or not
-     */
-    public static boolean   isIsogram(String s){
-
-        System.out.println("********** Printing Isogram or not *********");
-        boolean isIsogram = true;
-        char[] ch = s.toCharArray();
-        Set<Character> chSet = new HashSet<>();
-        for(Character c :ch){
-            if(chSet.contains(c))
-                isIsogram = false;
-            else
-                chSet.add(c);
-        }
-        return isIsogram;
-
     }
     /*
      method to Check For Rotation of String
