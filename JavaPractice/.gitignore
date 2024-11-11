@@ -1,6 +1,6 @@
-.idea
+.idea/
 out
-.idea/sonarlint/issuestore/index.pb
+.idea/sonarlint/*
 .idea/sonarlint/securityhotspotstore/index.pb
 .idea/misc.xml
 JavaPractice.iml
