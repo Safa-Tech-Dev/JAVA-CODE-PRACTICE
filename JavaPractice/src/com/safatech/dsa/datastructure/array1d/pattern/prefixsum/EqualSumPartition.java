@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array.pattern.prefixsum;
+package com.safatech.dsa.datastructure.array1d.pattern.prefixsum;
 
 public class EqualSumPartition {
 

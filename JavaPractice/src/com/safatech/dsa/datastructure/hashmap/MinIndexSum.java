@@ -83,7 +83,7 @@ public class MinIndexSum {
 
             }
         }
-        // Return the list as an array
+        // Return the list as an array1d
         return result.toArray(new String[0]);
 
     }

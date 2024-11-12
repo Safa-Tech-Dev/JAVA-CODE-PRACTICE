@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array.pattern.twopointerers;
+package com.safatech.dsa.datastructure.array1d.pattern.twopointerers;
 
 /**
  * Problem 1 : Move 0 to the left and 1 to the right
@@ -64,10 +64,10 @@ public class SortArray0And1 {
     public static void main(String[] args) {
 
         int[] arr = {1,0,1,0,1,0,1,0,1,0};
-        System.out.println("Original array:");
+        System.out.println("Original array1d:");
         print(arr);
         sortZeroesAndOnes(arr);
-        System.out.println("Sorted array:");
+        System.out.println("Sorted array1d:");
         print(arr);
     }
 }

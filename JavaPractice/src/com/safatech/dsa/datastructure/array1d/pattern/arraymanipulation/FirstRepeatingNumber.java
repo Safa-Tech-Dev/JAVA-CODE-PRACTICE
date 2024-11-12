@@ -1,7 +1,7 @@
-package com.safatech.dsa.datastructure.array.pattern.arraymanipulation;
+package com.safatech.dsa.datastructure.array1d.pattern.arraymanipulation;
 
 /**
- * Given an array 'a' consisting of integers .Return the first repeating number in the array,
+ * Given an array1d 'a' consisting of integers .Return the first repeating number in the array1d,
  * if no value is being repeated return -1
  */
 public class FirstRepeatingNumber {

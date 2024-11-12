@@ -124,7 +124,7 @@ public class Java8 {
 
         // method - 2
         /*
-        11.Write a Program to find the Maximum element in an array?
+        11.Write a Program to find the Maximum element in an array1d?
         */
         int[] arr2 = {12,19,20,88,00,9};
         System.out.println(Java8.findMaxElement(arr2));
@@ -166,8 +166,8 @@ public class Java8 {
         number.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
 
         /*
-        19.Given an integer array nums, return true if any value appears
-        at least twice in the array, and return false if every element is distinct.
+        19.Given an integer array1d nums, return true if any value appears
+        at least twice in the array1d, and return false if every element is distinct.
          */
         System.out.println(" ******* Printing true or false for duplicate element ********");
         int[] nums = {1,2,3,1};
@@ -187,9 +187,9 @@ public class Java8 {
 //myList1.stream().map( k -> k * k * k).filter(m -> m > 50).forEach(System.out::println);
 
         /*
-        22. Write a Java 8 program to sort an array and then convert the sorted array into Stream?
+        22. Write a Java 8 program to sort an array1d and then convert the sorted array1d into Stream?
          */
-        System.out.println(" ********** Printing sorted array and converted to stream ************");
+        System.out.println(" ********** Printing sorted array1d and converted to stream ************");
         int[] ar = { 99, 55, 203, 99, 4, 91 };
         //Arrays.parallelSort(ar);
         Arrays.sort(ar);

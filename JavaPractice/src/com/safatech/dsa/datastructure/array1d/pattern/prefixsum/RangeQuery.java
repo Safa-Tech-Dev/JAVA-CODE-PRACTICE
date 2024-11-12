@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array.pattern.prefixsum;
+package com.safatech.dsa.datastructure.array1d.pattern.prefixsum;
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class RangeQuery {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter array size");
+        System.out.println("Enter array1d size");
         int n = sc.nextInt();
         int[] arr = new int[n + 1];
         System.out.println("Enter " + n + " element");

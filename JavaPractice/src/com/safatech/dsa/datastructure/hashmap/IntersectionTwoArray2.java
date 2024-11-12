@@ -6,7 +6,7 @@ import java.util.*;
  *  Intersection of Two Arrays II
  *
  * Solution
- * Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
+ * Given two integer arrays nums1 and nums2, return an array1d of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
  *
  * Example 1:
  * Input: nums1 = [1,2,2,1], nums2 = [2,2]
@@ -18,7 +18,7 @@ import java.util.*;
  * Explanation: [9,4] is also accepted.
  *
  * Follow up:
- * What if the given array is already sorted? How would you optimize your algorithm?
+ * What if the given array1d is already sorted? How would you optimize your algorithm?
  * What if nums1's size is small compared to nums2's size? Which algorithm is better?
  * What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
  */
@@ -57,7 +57,7 @@ public class IntersectionTwoArray2 {
             }
         }
         int[] result = new int[intersect.size()];
-        //convert list to array
+        //convert list to array1d
         for(int i = 0; i<intersect.size(); i++){
 
             result[i] = intersect.get(i);

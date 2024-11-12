@@ -1,7 +1,7 @@
-package com.safatech.dsa.datastructure.array.pattern.targetsum;
+package com.safatech.dsa.datastructure.array1d.pattern.targetsum;
 
 /**
- * find the total no. of pairs in the array whose sum is equal to the given value x.
+ * find the total no. of pairs in the array1d whose sum is equal to the given value x.
  */
 public class TargetSumORTwoSum {
 

@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array.pattern.arraymanipulation;
+package com.safatech.dsa.datastructure.array1d.pattern.arraymanipulation;
 
 import java.util.Scanner;
 

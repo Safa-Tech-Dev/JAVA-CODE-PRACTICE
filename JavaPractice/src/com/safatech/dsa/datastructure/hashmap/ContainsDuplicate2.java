@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  *
- * Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array
+ * Given an integer array1d nums and an integer k, return true if there are two distinct indices i and j in the array1d
  * such that nums[i] == nums[j] and abs(i - j) <= k.
 
  * Example 1:
@@ -44,7 +44,7 @@ public class ContainsDuplicate2 {
         //create a HashMap
         Map<Integer, Integer> map = new HashMap<>();
 
-        // Iterate over array nums
+        // Iterate over array1d nums
         for(int i = 0; i<nums.length; i++){
 
             //check the key is  present in the map & indeces should be <=k

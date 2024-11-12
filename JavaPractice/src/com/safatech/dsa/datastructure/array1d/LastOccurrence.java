@@ -1,6 +1,6 @@
-package com.safatech.dsa.datastructure.array;
+package com.safatech.dsa.datastructure.array1d;
 /**
- * Check the last occurrence of the element in an array
+ * Check the last occurrence of the element in an array1d
  */
 public class LastOccurrence {
 

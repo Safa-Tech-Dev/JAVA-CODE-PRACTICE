@@ -1,7 +1,7 @@
-package com.safatech.dsa.datastructure.array.pattern.arraymanipulation;
+package com.safatech.dsa.datastructure.array1d.pattern.arraymanipulation;
 
 /**
- * fini unique number in a given array where all the numbers are being repeated twice with one value being unique.
+ * fini unique number in a given array1d where all the numbers are being repeated twice with one value being unique.
  */
 public class FindUnique {
 

@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array;
+package com.safatech.dsa.datastructure.array1d;
 
 /**
  * Count the number the frequency of the element

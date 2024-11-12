@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array.pattern.twopointerers;
+package com.safatech.dsa.datastructure.array1d.pattern.twopointerers;
 
 /**
  * Problem  : Move even to the left and odd to the right(parity)
@@ -44,10 +44,10 @@ public class SortArrayEvenOdd {
     public static void main(String[] args) {
 
         int[] arr = {1,2,3,4,5,6,7};
-        System.out.println("Original array:");
+        System.out.println("Original array1d:");
         print(arr);
         sortEvenOdd(arr);
-        System.out.println("Sorted array:");
+        System.out.println("Sorted array1d:");
         print(arr);
     }
 }

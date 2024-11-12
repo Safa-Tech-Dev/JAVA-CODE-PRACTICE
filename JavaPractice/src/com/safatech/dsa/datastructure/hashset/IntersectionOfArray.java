@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Given two integer arrays nums1 and nums2, return an array of their intersection.
+ * Given two integer arrays nums1 and nums2, return an array1d of their intersection.
  * Each element in the result must be unique and you may return the result in any order
  * Example 1:
  * Input: nums1 = [1,2,2,1], nums2 = [2,2]

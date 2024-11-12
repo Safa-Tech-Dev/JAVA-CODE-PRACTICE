@@ -5,30 +5,11 @@ public class CoreJava{
 
     public static void main(String[] args) {
 
-
-        /*
-         1.Rotate the array by k times;
-         int[] nums = {1,2,3,4,5,6,7};
-         k = 3;
-         Output: [5,6,7,1,2,3,4]
-         */
-        int[] arr = {1,2,3,4,5,6,7};
-        int k = 3;
-        System.out.println("************* Printing the Rotated Array **************");
-        CoreJava.rotateArray(arr,k);
-        for(int i = 0; i< arr.length; i++){
-            System.out.print(arr[i]+ " ");
-        }
         /*
         3.Finding the nth element in the Fibonacci series
-         */
+         */ 
         System.out.println("******* Finding the n-th element in the Fibonacci series ****");
         System.out.println(CoreJava.fibonacci(10));
-
-        /*
-        4.Find the duplicate Character in a String
-         */
-        System.out.println(CoreJava.findDuplicateUsingFor_Map("codedecode"));
 
         /*
         Remove the duplicates character from the string and print the string
@@ -92,7 +73,7 @@ public class CoreJava{
         System.out.println(removedspaces);
 
         /*
-        14.Write a program to reverse the array without using the new array
+        14.Write a program to reverse the array1d without using the new array1d
          */
         int[] arr2 = {1,2,3,4,5,6};
         int temp;
@@ -102,7 +83,7 @@ public class CoreJava{
             arr2[i] = arr2[arr2.length - 1 - i];
             arr2[arr2.length - 1 - i] = temp;
         }
-        System.out.println("*********** Printing reverse the array without using the new array ***********");
+        System.out.println("*********** Printing reverse the array1d without using the new array1d ***********");
         for(int i = 0; i<arr2.length; i++){
             System.out.println(arr2[i] + "");
         }
@@ -152,7 +133,7 @@ public class CoreJava{
         CoreJava.checkPalindrom(originalString2);
 
         /*
-        Program to remove/ delete the element from the array
+        Program to remove/ delete the element from the array1d
          */
         int[] originalArray = {1,2,3,4,5};
         int elementToRemove = 3;
@@ -263,28 +244,6 @@ public class CoreJava{
         }
         System.out.println("Even count :" + even_count  + "," + "Odd count : " + odd_count);
     }
-
-    public static Set<Character> findDuplicateUsingFor_Map(String name){
-
-        System.out.println(" ***** Printing the Duplicates character ******");
-        Set<Character> duplicates = new LinkedHashSet<>();
-        HashMap<Character, Integer> countMap = new HashMap<>();
-
-        for(int i = 0; i< name.length(); i++){
-
-            if(countMap.containsKey(name.charAt(i)))
-                countMap.put(name.charAt(i), countMap.get(name.charAt(i)) + 1);
-            else
-                countMap.put(name.charAt(i), 1);
-
-        }
-        for(Map.Entry<Character, Integer> entry : countMap.entrySet()){
-
-            if(entry.getValue() > 1)
-                duplicates.add(entry.getKey());
-        }
-        return duplicates;
-    }
     /*
     Remove the duplicates character from the string and print the string
      */
@@ -300,31 +259,6 @@ public class CoreJava{
             }
         }
         return sb.toString();
-    }
-
-
-    /*
-    reverse the array
-     */
-    static void reverseArray(int[] a, int start, int end){
-
-        while (start < end){
-
-            int temp = a[start];
-            a[start] = a[end];
-            a[end] = temp;
-            start++;
-            end--;
-        }
-    }
-    static void rotateArray(int[] a, int k){
-        k = k % a.length; // 8 % 7 = 1 rotate
-        if(k < 0){
-            k = k + a.length; //-3 + 7 = 4 rotate
-        }
-        reverseArray(a, 0, a.length-1); // 7,6,5,4,3,2,1
-        reverseArray(a,  0, k -1);//5,6,7,4,3,2,1
-        reverseArray(a, k, a.length-1); //5,6,7,1,2,3,4
     }
 
     /*
