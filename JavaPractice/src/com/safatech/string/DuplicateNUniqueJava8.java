@@ -1,10 +1,10 @@
-package com.safatech.java8;
+package com.safatech.string;
 
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class DuplicateElement {
+public class DuplicateNUniqueJava8 {
 
       /*
        How to find duplicate elements in a given integers list in java using Stream functions?
@@ -27,6 +27,7 @@ public class DuplicateElement {
     }
     public static void findDupicateInString(String str){
 
+        Set<String> uniqueCharacter = new HashSet<>();
         Map<String, Long> mapOfLetter = Arrays.stream(str.split(""))
                 .map(String::toLowerCase)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
@@ -37,6 +38,7 @@ public class DuplicateElement {
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
         System.out.println("Duplicate letter : " + duplicateLetter);
+
     }
     public static void main(String[] args) {
 
