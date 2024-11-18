@@ -12,32 +12,7 @@ public class Java8 {
 
     public static void main(String[] args) {
 
-
-
-        List<Integer> myList2 = Arrays.asList(10,12,15,8,9,7,5);
-        myList2.stream().map(s -> s + "") // converting to string
-                .filter( i -> i.startsWith("1")).forEach( i -> System.out.println(i));
-
-        /*
-        3. How to find duplicate elements in a given integers list in java using Stream functions?
-         */
-        System.out.println("********** Find the Duplicate Elements ************");
-        Integer[] intArray = new Integer[]{12,34,12,5,5,23};
-        List<Integer> myList3 = Arrays.asList(intArray);
-        Set<Integer> mySet = new HashSet<>();
-        myList3.stream().filter(n -> !mySet.add(n)).forEach(System.out::println);
-
-        //method - 2
-        String s1 = "ILoveDawateIslami";
-        List<String> duplicatElements = Arrays.stream(s1.split(""))
-                .map(String::toLowerCase)
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet().stream()
-                .filter(x -> x.getValue() > 1)
-                .map(Map.Entry::getKey)
-                .collect(Collectors.toList());
-        System.out.println(duplicatElements);
-
+        List<Integer> myList3 = Arrays.asList(12,45,63,1,22,12,2,3);
         /*
         4.How to count each element/word from the String ArrayList in Java8?
          */
@@ -48,40 +23,28 @@ public class Java8 {
         System.out.println(namesCounting);
 
         /*
-       5.Find the Unique Element
-         */
-        System.out.println("********* Printing Unique Elements *********");
-        List<String> uniqueElement =  Arrays.stream(s1.split(""))
-                .map(String::toLowerCase)
-                        .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
-                                .entrySet().stream()
-                        .filter(x -> x.getValue() == 1)
-                                .map(Map.Entry::getKey)
-                                        .collect(Collectors.toList());
-        System.out.println(uniqueElement);
-        /*
         6.Find First Non-Repeated Element from the String
          */
-        System.out.println("*********Printing first Non-Repeated Element*********");
+        /*System.out.println("*********Printing first Non-Repeated Element*********");
         String first_non_Repeated_Element = Arrays.stream(s1.split(""))
                 .map(String::toLowerCase)
                         .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new, Collectors.counting()))
                                 .entrySet().stream()
                         .filter(x -> x.getValue() == 1)
                                         .findFirst().get().getKey();
-        System.out.println(first_non_Repeated_Element);
+        System.out.println(first_non_Repeated_Element);*/
 
         /*
         7.Find First Repeated Element from the String
          */
-        System.out.println("****************first Repeated Element******************");
+       /* System.out.println("****************first Repeated Element******************");
         String firstRepeatedElement = Arrays.stream(s1.split(""))
                 .map(String::toLowerCase)
                         .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()))
                                 .entrySet().stream()
                         .filter(x -> x.getValue() > 1)
                                 .findFirst().get().getKey();
-        System.out.println(firstRepeatedElement);
+        System.out.println(firstRepeatedElement);*/
 
         /*
         8.Given the list of integers, find the first element of the list using Stream functions?
@@ -124,19 +87,10 @@ public class Java8 {
 
         // method - 2
         /*
-        11.Write a Program to find the Maximum element in an array1d?
+        11.Write a Program to find the Maximum element in an array?
         */
         int[] arr2 = {12,19,20,88,00,9};
         System.out.println(Java8.findMaxElement(arr2));
-        /*
-        12.Write a program to print the count of each character in a String?
-         */
-        System.out.println("*******Printing Each characters count*********");
-        String s = "ILoveDawateIslami";
-        Map<String, Long> map = Arrays.stream(s.split("")) // step - 1 -> split the string and convert to stream of Arrays
-                .map(String::toLowerCase) // step - 2 -> convert all character to lowercase
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        System.out.println(map);
         /*
         13.Write a program to print the count of each City in a List?
          */
