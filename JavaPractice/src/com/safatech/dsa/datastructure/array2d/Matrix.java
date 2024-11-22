@@ -28,6 +28,27 @@ public class Matrix {
         System.out.println("Sum of matrix 1 and matrix 2");
         printMatrix(sum);
     }
+
+    public static void multiply(int[][] a, int r1, int c1, int[][] b, int r2, int c2){
+
+        if(c1 != r2){
+            System.out.println("Multiplication not possible - Wrong Dimension!");
+            return;
+        }
+        int[][] mul = new int[r1][c2];
+
+        for(int i = 0; i < r1; i++){ // rows number
+            for(int j = 0; j < c2; j++){ // column numbers
+                for(int k = 0; k < c1; k++){ // for multiplication
+                    // i = 1, j = 0
+                    // mul[i][j] = ith row of a * jth col of b
+                    mul[i][j] += (a[i][k] * b[k][j]);
+                }
+            }
+        }
+        System.out.println("Multiplication of 2 matrix.");
+        printMatrix(mul);
+    }
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -56,6 +77,7 @@ public class Matrix {
         printMatrix(a);
         System.out.println("Matrix 2");
         printMatrix(b);
-        add(a, r1, c1, b,r2,c2);
+//        add(a, r1, c1, b,r2,c2);
+        multiply(a, r1, c1, b,r2,c2);
     }
 }
