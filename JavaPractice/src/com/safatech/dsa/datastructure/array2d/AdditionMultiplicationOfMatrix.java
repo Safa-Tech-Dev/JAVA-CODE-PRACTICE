@@ -2,7 +2,7 @@ package com.safatech.dsa.datastructure.array2d;
 
 import java.util.Scanner;
 
-public class Matrix {
+public class AdditionMultiplicationOfMatrix {
 
     public static void printMatrix(int[][] matrix){
 
