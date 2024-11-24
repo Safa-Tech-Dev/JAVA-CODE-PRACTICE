@@ -24,6 +24,19 @@ public class TransposeOfMatrix {
         }
         return ans;
     }
+    //valid for only square matrix
+    public static void findTransposeInPlace(int[][] matrix, int r, int c){
+
+        for(int i = 0; i < c; i++){
+            for(int j = i; j < r; j++){ // j will start from i
+                //swap matrix[i][j] and matrix[j][i]
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+
+        }
+    }
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -42,7 +55,8 @@ public class TransposeOfMatrix {
         System.out.println("Input Matrix");
         printMatrix(matrix);
         System.out.println("Transpose of Matrix");
-        int[][] transposed = findTranspose(matrix, r, c);
-        printMatrix(transposed);
+        //int[][] transposed = findTranspose(matrix, r, c);
+        findTransposeInPlace(matrix, r, c);
+        printMatrix(matrix);
     }
 }
