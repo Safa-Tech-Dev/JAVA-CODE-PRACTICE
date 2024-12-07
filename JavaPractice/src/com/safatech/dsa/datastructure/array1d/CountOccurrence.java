@@ -2,6 +2,11 @@ package com.safatech.dsa.datastructure.array1d;
 
 /**
  * Count the number the frequency of the element
+ * arr1 = {5,2,6,5,8,9,5};
+ * item = 5
+ * o/p : 3
+ * item = 7
+ * o/p 0
  */
 public class CountOccurrence {
 
