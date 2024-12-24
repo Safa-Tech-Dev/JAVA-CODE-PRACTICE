@@ -1,5 +1,7 @@
-package com.safatech.dsa.datastructure.array1d;
-
+package com.safatech.corejava;
+/*
+Write a program to find the sum of all the digits of a number
+ */
 public class SumOfDigit {
 
     public static void main(String[] args) {
