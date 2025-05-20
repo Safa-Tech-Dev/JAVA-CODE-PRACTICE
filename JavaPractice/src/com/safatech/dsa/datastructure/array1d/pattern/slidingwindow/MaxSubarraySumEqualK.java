@@ -38,6 +38,7 @@ public class MaxSubarraySumEqualK {
             maxSum = Math.max(maxSum, sum); // update maxSum
         }
         return maxSum;
+        // return maxSum / k;  for avg sum subarray
     }
 
     public static void main(String[] args) {
