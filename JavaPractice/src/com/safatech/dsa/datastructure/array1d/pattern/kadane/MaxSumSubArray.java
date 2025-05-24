@@ -2,6 +2,22 @@ package JavaPractice.src.com.safatech.dsa.datastructure.array1d.pattern.kadane;
 
 public class MaxSumSubArray {
 
+    // Brute force - approach
+    public static int getMaxSum1(int[] arr){
+
+        int maxSum = 0;
+
+        for(int i = 0; i < arr.length; i++){
+
+            int currentSum = 0;
+            for (int j = i; j < arr.length; j++){
+                currentSum += arr[j];
+                maxSum = Math.max(maxSum, currentSum);
+            }
+        }
+        return maxSum;
+    }
+    // Optimal - approach
     public static int getMaxSum(int[] arr){
 
         int currentSum = arr[0]; // initialize index 0 as the current sum
@@ -20,5 +36,6 @@ public class MaxSumSubArray {
     public static void main(String[] args) {
         int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println("Maximum Subarray Sum = " + getMaxSum(nums)); // Output: 6
+        System.out.println(getMaxSum1(nums));
     }
 }
