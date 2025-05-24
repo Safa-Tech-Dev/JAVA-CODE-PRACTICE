@@ -1,7 +1,7 @@
 package com.safatech.dsa.datastructure.array1d;
 
 /**
- * Check the array1d is sorted or not
+ * Check the array  is sorted or not
  */
 public class IsArraySorted {
 
