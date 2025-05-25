@@ -25,7 +25,7 @@ public class RangeQuery {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter array1d size");
+        System.out.println("Enter array size");
         int n = sc.nextInt();
         int[] arr = new int[n + 1];
         System.out.println("Enter " + n + " element");
