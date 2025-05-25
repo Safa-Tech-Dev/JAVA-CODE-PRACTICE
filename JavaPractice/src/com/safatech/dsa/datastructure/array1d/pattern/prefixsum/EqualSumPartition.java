@@ -1,6 +1,6 @@
 package com.safatech.dsa.datastructure.array1d.pattern.prefixsum;
 
-public class EqualSumPartition {
+public class  EqualSumPartition {
 
     public static int getArraySum(int[] arr){
 
