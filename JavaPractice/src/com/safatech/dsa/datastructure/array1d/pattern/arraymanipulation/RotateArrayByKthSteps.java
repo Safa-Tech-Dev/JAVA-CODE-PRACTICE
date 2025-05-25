@@ -31,7 +31,6 @@ public class RotateArrayByKthSteps {
 
     public static void getreversedArrayInPlace(int[] arr, int start, int end) {
 
-        int n = arr.length;
         while (start < end){
             swapInPlace(arr,start, end);
             start++;
