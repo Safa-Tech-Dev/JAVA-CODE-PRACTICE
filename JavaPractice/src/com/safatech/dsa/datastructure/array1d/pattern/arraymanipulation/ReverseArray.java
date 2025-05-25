@@ -7,7 +7,7 @@ public class ReverseArray {
         int n = arr.length;
         int[] ans = new int[n];
         int j = 0;
-        //traverse the original array1d in reverse direction
+        //traverse the original array in reverse direction
         for(int i = n - 1; i>= 0; i--){
 
             ans[j++] = arr[i];
