@@ -64,10 +64,10 @@ public class SortArray0And1 {
     public static void main(String[] args) {
 
         int[] arr = {1,0,1,0,1,0,1,0,1,0};
-        System.out.println("Original array1d:");
+        System.out.println("Original array:");
         print(arr);
         sortZeroesAndOnes(arr);
-        System.out.println("Sorted array1d:");
+        System.out.println("Sorted array:");
         print(arr);
     }
 }
