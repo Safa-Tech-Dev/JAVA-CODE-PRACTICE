@@ -23,10 +23,10 @@ public class TargetSumORTwoSum {
     public static void main(String[] args) {
 
         int[] arr = {4,6,3,5,8,2};
-        int target = 7;
+        int target = 7; //(4,3),(5,2)
         System.out.println(targetSum(arr,target));
         int[] arr1 = {4,6,3,5,8,2};
-        int target1 = 6;
+        int target1 = 6; //(4,2)
         System.out.println(targetSum(arr1,target1));
     }
 
