@@ -39,16 +39,17 @@ public class TwoSum {
     }
     public static int[] getTwoSumIndex(int[] nums, int target){
 
-        System.out.println("+++++++++++++ Printing Two Sum +++++++++");
         Map<Integer, Integer> m = new HashMap<>();
+        int[] ans = {-1};
         for(int i = 0; i< nums.length; i++){
-            int complement = target - nums[i]; // 9 - 2 = 7
-            if(m.containsKey(complement) && m.get(complement) != i){
-                return new int[]{m.get(complement),i};
+            int partner = target - nums[i]; // 9 - 2 = 7
+            if(m.containsKey(partner) && m.get(partner) != i){
+                ans = new int[]{m.get(partner),i};
+                return ans;
             }else{
                 m.put(nums[i],i);
             }
         }
-        return new int[] {};
+        return ans;
     }
 }
