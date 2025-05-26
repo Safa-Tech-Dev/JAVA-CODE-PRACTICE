@@ -1,8 +1,8 @@
 package com.safatech.dsa.datastructure.array1d.pattern.prefixsum;
 
 /**
- * Given a integer array1d "a" return the prefix sum /running sum
- * in the same array1d without creating a new array1d.
+ * Given an integer array "a" return the prefix sum /running sum
+ * in the same array without creating a new array.
  */
 public class PrefixSum {
 
@@ -26,10 +26,10 @@ public class PrefixSum {
     public static void main(String[] args) {
 
         int[] input = {2,1,3,4,5};
-        System.out.println("Original array1d....");
+        System.out.println("Original array....");
         printArray(input);
         int[] prefixSumArray = getPrefixSumArray(input);
-        System.out.println("Prefix Sum array1d....");
+        System.out.println("Prefix Sum array....");
         printArray(prefixSumArray);
     }
 }
