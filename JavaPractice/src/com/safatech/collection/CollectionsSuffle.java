@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+program to shuffle all the elements of a collection in Java.
+*/
 public class CollectionsSuffle {
 
     public static void main(String[] args) {
