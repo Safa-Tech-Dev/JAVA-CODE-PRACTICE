@@ -2,7 +2,9 @@ package JavaPractice.src.com.safatech.collection;
 
 import java.util.Set;
 import java.util.TreeSet;
-
+/*
+program in Java to clone a Treeset to another Treeset.
+*/
 public class ClonedTreeSet {
 
     public static void main(String[] args) {
