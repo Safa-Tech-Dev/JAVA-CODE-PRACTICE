@@ -1,9 +1,10 @@
-package com.safatech.dsa.datastructure.array1d.pattern.twopointerers;
+package JavaPractice.src.com.safatech.dsa.datastructure.array1d.pattern.twopointerers;
 
 /**
  * Problem  : Move even to the left and odd to the right(parity)
  * input : 1,2,3,4,5,6,7
  * output : 2,4,6,1,3,5,7
+ * Order doesn't matter
  */
 public class SortArrayEvenOdd {
 
