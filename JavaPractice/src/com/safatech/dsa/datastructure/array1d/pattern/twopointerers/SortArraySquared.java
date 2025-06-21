@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array1d.pattern.twopointerers;
+package JavaPractice.src.com.safatech.dsa.datastructure.array1d.pattern.twopointerers;
 
 public class SortArraySquared {
 
