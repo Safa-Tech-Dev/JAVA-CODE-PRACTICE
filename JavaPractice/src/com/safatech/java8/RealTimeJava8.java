@@ -1,6 +1,7 @@
-package com.safatech.java8;
+package JavaPractice.src.com.safatech.java8;
 
-import com.safatech.comparator.*;
+import JavaPractice.src.com.safatech.comparator.Address;
+import JavaPractice.src.com.safatech.comparator.Employee;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -28,19 +29,6 @@ public class RealTimeJava8 {
         employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0,new Address("Street1",19)));
         employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0,new Address("Street1",16)));
 
-        /*
-        1.Sort based on Age
-         */
-        Collections.sort(employeeList,new AgeComparator());
-        System.out.println("Sorted based on Ages " + employeeList);
-
-        System.out.println("***********************************************************************************");
-        Collections.sort(employeeList,new NameComparator());
-        System.out.println("Sorted based on Names " + employeeList);
-
-        System.out.println("***********************************************************************************");
-        Collections.sort(employeeList,new AddressComparator());
-        System.out.println("Sorted based on Address " + employeeList);
 
         System.out.println("***********************************************************************************");
         /*
