@@ -1,4 +1,4 @@
-package com.safatech.comparator;
+package JavaPractice.src.com.safatech.comparator;
 
 public class Address implements Comparable<Address>{
 

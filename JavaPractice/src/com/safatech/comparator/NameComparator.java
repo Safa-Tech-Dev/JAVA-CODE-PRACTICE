@@ -1,4 +1,4 @@
-package com.safatech.comparator;
+package  JavaPractice.src.com.safatech.comparator;
 
 import java.util.Comparator;
 
