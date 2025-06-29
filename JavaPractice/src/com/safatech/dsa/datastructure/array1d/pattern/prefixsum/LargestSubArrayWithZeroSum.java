@@ -1,4 +1,4 @@
-package JavaPractice.src.com.safatech.dsa.datastructure.hashmap;
+package JavaPractice.src.com.safatech.dsa.datastructure.array1d.pattern.prefixsum;
 
 import java.util.HashMap;
 import java.util.Map;
