@@ -1,6 +1,8 @@
 package JavaPractice.src.com.safatech.dsa.datastructure.priorityqueue.pattern.topk;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 //Given an integer array nums and an integer k, return the k largest element in the array.
@@ -37,10 +39,25 @@ public class TopKLargestElement {
         return result;
     }
 
+    public static void findTopKLargestElement_NaiveApproach(int[] nums, int k){
+
+        // Wrap it to Integer class , Box it
+        Integer[] arr = Arrays.stream(nums).boxed().toArray(Integer[]::new);
+
+        // Sort it in Descending order
+        Arrays.sort(arr, Comparator.reverseOrder());
+        // print the first k elements
+        for(int i = 0; i < k; i++){
+            System.out.print(arr[i] + " ");
+        }
+
+    }
+
     public static void main(String[] args) {
 
         int[] arr = {5,9,3,4,8,2};
         int k = 3;
         System.out.println(Arrays.toString(findTopKLargestElement(arr,k)));
+        findTopKLargestElement_NaiveApproach(arr,k);
     }
 }
