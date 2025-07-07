@@ -1,4 +1,4 @@
-package com.safatech.string;
+package JavaPractice.src.com.safatech.string;
 
 
 public class ReversedString {

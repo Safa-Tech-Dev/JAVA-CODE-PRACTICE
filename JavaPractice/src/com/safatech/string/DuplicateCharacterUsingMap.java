@@ -1,4 +1,4 @@
-package com.safatech.string;
+package JavaPractice.src.com.safatech.string;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;

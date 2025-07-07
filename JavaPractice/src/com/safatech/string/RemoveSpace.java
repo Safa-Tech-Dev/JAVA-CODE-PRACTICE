@@ -1,4 +1,4 @@
-package com.safatech.string;
+package JavaPractice.src.com.safatech.string;
 
 /*
 Write a program to remove all space from string
