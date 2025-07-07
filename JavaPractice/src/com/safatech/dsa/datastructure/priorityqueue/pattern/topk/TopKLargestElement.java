@@ -39,14 +39,15 @@ public class TopKLargestElement {
         return result;
     }
 
+    // T.C = O(nlogn)
     public static void findTopKLargestElement_NaiveApproach(int[] nums, int k){
 
         // Wrap it to Integer class , Box it
         Integer[] arr = Arrays.stream(nums).boxed().toArray(Integer[]::new);
 
         // Sort it in Descending order
-        Arrays.sort(arr, Comparator.reverseOrder());
-        // print the first k elements
+        Arrays.sort(arr, Comparator.reverseOrder()); // Dual-privot QuickSort, (O(nlogn)
+        // print the first k elements, O(k)
         for(int i = 0; i < k; i++){
             System.out.print(arr[i] + " ");
         }
