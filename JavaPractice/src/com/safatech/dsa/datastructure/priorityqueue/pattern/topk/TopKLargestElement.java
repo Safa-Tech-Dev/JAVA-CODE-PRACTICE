@@ -19,12 +19,12 @@ public class TopKLargestElement {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
         //2. add first k element in minHeap to maintain the top k elements[T.C = O(klogk]
-        for(int i = 0; i < k; i++){
-            minHeap.add(nums[i]);
-        }
+//        for(int i = 0; i < k; i++){
+//            minHeap.add(nums[i]);
+//        }
 
-        //3. add remaining elements [T.C = O((n-k) * logk]
-        for(int i = k; i < nums.length; i++){
+        //3. add elements [T.C = nlogk]
+        for(int i =  0; i < nums.length; i++){
 
             minHeap.add(nums[i]); // add the element to heap
             if(minHeap.size() > k){ // if size is > k, remove the smallest element from the heap
