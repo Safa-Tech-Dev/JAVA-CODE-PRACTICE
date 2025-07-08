@@ -1,4 +1,4 @@
-package com.safatech.java8;
+package JavaPractice.src.com.safatech.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,7 +13,7 @@ public class NumberStartingWith1 {
         List<Integer> numbers = Arrays.asList(10,12,15,8,9,7,5);
 
         numbers.stream()
-                .map(s -> s + "")
+                .map(s -> s + "")// conveting to string
                 .filter(s -> s.startsWith("1"))
                 .forEach(System.out::println);
 
