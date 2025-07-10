@@ -11,8 +11,8 @@ public class ConvertToUpperCase {
 
     public static void getUppercaseString(String[] names){
 
-        List<String> nameList = Arrays.stream(names)
-                .map(String::toUpperCase)
+        List<String> nameList = Arrays.stream(names) // array to stream
+                .map(String::toUpperCase) // lowercase to uppercase
                 .collect(Collectors.toList());
         System.out.println(nameList);
     }
