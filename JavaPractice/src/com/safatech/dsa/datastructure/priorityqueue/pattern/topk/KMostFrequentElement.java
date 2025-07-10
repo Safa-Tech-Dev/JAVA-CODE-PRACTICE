@@ -47,7 +47,7 @@ public class KMostFrequentElement {
             }
         }
         int[] result = new int[k];
-        // Add Tok k element in result
+        // Add Top k element in result
         for(int i = 0; i < k; i++){
             result[i] = minHeap.poll().getKey();
         }
