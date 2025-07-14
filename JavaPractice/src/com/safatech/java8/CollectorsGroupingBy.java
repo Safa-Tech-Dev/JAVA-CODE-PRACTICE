@@ -30,16 +30,33 @@ public class CollectorsGroupingBy {
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(countedWord);
     }
+
+    /**
+     * How to count each word from the String
+     * @param s
+     */
+    public static void getFrequencyInString(String s){
+
+        String[] splitedString = s.split(" ");
+        Map<String, Long> frequencyMap = Arrays.stream(splitedString)
+                .map(e -> e.replace(",", ""))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(frequencyMap);
+    }
     public static void main(String[] args) {
 
-//        Count the City Frequency
+        //Count the City Frequency
         List<String> listOfCity = Arrays.asList("kochi", "Trivandrum", "Chennai",
                 "Chennai", "Trivandrum", "Pune", "Pune", "Pune", "Bangalore");
-//        getCityFrequencyCount(listOfCity);
+        getCityFrequencyCount(listOfCity);
 
         //How to count each element/word from the String ArrayList in Java8?
         List<String> names = Arrays.asList("AA","BB", "CC","AA");
         countEachWord(names);
+
+        // count freuency in string
+        String str = "hi, how are you, how are you";
+        getFrequencyInString(str);
 
     }
 }
