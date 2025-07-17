@@ -3,11 +3,12 @@ package JavaPractice.src.com.safatech.string;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class RemoveDuplicateCharacter {
+/**
+ * Remove the duplicates character from the string and print the string
+ */
+public class  RemoveDuplicateCharacter {
 
-      /*
-      Remove the duplicates character from the string and print the string
-      */
+
     public static void getRemovedString(String str){
 
         Set<Character> characterSet = new LinkedHashSet<>();
