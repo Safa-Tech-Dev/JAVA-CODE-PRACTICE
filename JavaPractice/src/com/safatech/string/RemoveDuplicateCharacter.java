@@ -3,7 +3,7 @@ package JavaPractice.src.com.safatech.string;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-/**
+ /**
  * Remove the duplicates character from the string and print the string
  */
 public class  RemoveDuplicateCharacter {
