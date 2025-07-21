@@ -9,15 +9,15 @@ public class ReversedString {
     public static void getReversedStringAndEachCharacter(String str){
 
         //in-built reverse method
-        StringBuilder sb = new StringBuilder(str);
+        StringBuilder sb = new StringBuilder(str);  // Thread Safe
         System.out.println("Using in-built reverse() method : " + sb.reverse());
 
-        String reversedString = "";
+        StringBuffer bf = new StringBuffer(); // Not-Thread Safe
         for(int i = str.length() - 1; i>=0; i--){
 
-            reversedString += str.charAt(i);
+            bf.append(str.charAt(i));
         }
-        System.out.println(reversedString);
+        System.out.println(bf);
     }
 
         /*
@@ -31,20 +31,13 @@ public class ReversedString {
             sb.append(strArray[i]);
             sb.append(" ");
         }
-       /* String reversedWord = "";
-
-        for(int i = strArray.length -1; i>=0; i--){
-
-            reversedWord = reversedWord + strArray[i] +" ";
-
-        }*/
         System.out.println(sb);
     }
 
     public static void main(String[] args) {
 
         String str = "Safa Tech";
-        //getReversedStringAndEachCharacter(str);
+        getReversedStringAndEachCharacter(str);
 
         String s = "How are you";
         getReversedWord(s);

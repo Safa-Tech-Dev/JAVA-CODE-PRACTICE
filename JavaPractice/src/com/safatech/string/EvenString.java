@@ -9,7 +9,8 @@ public class EvenString {
 
     public static void getEvenString(String originalString){
 
-        for(String s : originalString.split(" ")){
+        String[] strArray = originalString.split(" ");
+        for(String s : strArray){
             if(s.length() % 2 == 0){
                 System.out.println(s);
             }
