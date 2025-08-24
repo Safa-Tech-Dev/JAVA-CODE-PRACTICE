@@ -1,4 +1,4 @@
-package JavaPractice.src.com.safatech.java8.model;
+package JavaPractice.src.com.safatech.java8.dao;
 
 import JavaPractice.src.com.safatech.comparator.Address;
 import JavaPractice.src.com.safatech.comparator.Employee;

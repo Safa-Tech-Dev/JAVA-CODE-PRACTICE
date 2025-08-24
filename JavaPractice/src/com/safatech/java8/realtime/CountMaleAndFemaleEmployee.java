@@ -1,11 +1,10 @@
 package JavaPractice.src.com.safatech.java8.realtime;
 
 import JavaPractice.src.com.safatech.comparator.Employee;
-import JavaPractice.src.com.safatech.java8.model.EmployeeRepositoryRealTime;
+import JavaPractice.src.com.safatech.java8.dao.EmployeeRepositoryRealTime;
 
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
