@@ -1,6 +1,6 @@
-package com.safatech.java8.service;
+package JavaPractice.src.com.safatech.java8.service;
 
-import com.safatech.java8.model.Employee;
+import JavaPractice.src.com.safatech.java8.model.Employee;
 
 import java.util.List;
 import java.util.Random;

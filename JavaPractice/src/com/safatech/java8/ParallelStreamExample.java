@@ -1,7 +1,7 @@
-package com.safatech.java8;
+package JavaPractice.src.com.safatech.java8;
 
-import com.safatech.java8.dao.EmployeeDao;
-import com.safatech.java8.model.Employee;
+import JavaPractice.src.com.safatech.java8.dao.EmployeeDao;
+import JavaPractice.src.com.safatech.java8.model.Employee;
 
 import java.util.List;
 import java.util.stream.IntStream;

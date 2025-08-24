@@ -1,10 +1,10 @@
-package com.safatech.java8;
+package JavaPractice.src.com.safatech.java8;
 
-import com.safatech.java8.model.Employee;
-import com.safatech.java8.model.EmployeeDO;
-import com.safatech.java8.service.EmployeeManager;
-import com.safatech.java8.service.EmployeeMapper;
-import com.safatech.java8.service.EmployeeServiceMR;
+import JavaPractice.src.com.safatech.java8.model.Employee;
+import JavaPractice.src.com.safatech.java8.model.EmployeeDO;
+import JavaPractice.src.com.safatech.java8.service.EmployeeManager;
+import JavaPractice.src.com.safatech.java8.service.EmployeeMapper;
+import JavaPractice.src.com.safatech.java8.service.EmployeeServiceMR;
 
 import java.util.ArrayList;
 import java.util.List;

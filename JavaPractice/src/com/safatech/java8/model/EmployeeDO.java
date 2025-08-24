@@ -1,4 +1,4 @@
-package com.safatech.java8.model;
+package JavaPractice.src.com.safatech.java8.model;
 
 public class EmployeeDO {
 

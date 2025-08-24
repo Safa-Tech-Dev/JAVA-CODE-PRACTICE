@@ -1,6 +1,6 @@
-package com.safatech.java8.dao;
+package JavaPractice.src.com.safatech.java8.dao;
 
-import com.safatech.java8.model.Employee;
+import JavaPractice.src.com.safatech.java8.model.Employee;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

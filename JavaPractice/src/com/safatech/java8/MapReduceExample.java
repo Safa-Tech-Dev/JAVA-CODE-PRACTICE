@@ -1,6 +1,6 @@
-package com.safatech.java8;
+package JavaPractice.src.com.safatech.java8;
 
-import com.safatech.java8.dao.EmployeeDao;
+import JavaPractice.src.com.safatech.java8.dao.EmployeeDao;
 
 import java.util.Arrays;
 import java.util.List;

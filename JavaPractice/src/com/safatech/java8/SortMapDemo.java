@@ -1,6 +1,6 @@
-package com.safatech.java8;
+package JavaPractice.src.com.safatech.java8;
 
-import com.safatech.java8.model.Employee;
+import JavaPractice.src. com.safatech.java8.model.Employee;
 import java.util.*;
 
 public class SortMapDemo {

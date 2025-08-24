@@ -1,7 +1,7 @@
-package com.safatech.java8.service;
+package JavaPractice.src.com.safatech.java8.service;
 
-import com.safatech.java8.model.Employee;
-import com.safatech.java8.model.EmployeeDO;
+import JavaPractice.src.com.safatech.java8.model.Employee;
+import JavaPractice.src.com.safatech.java8.model.EmployeeDO;
 
 public class EmployeeMapper {
 
