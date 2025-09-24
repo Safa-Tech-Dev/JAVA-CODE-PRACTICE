@@ -40,7 +40,7 @@ public class IsomorphicString {
         // Two strings cannot be isomorphic if they have different lengths.
         if(s.length() != t.length())
             return false;
-        // Use Java's built in map to store mappings of s chars to chars.
+        // Use Java's built in map to store mappings of s chars to t chars.
         Map<Character, Character> map = new HashMap<>();
         // Use a set to keep track of already mapped characters.
         Set<Character> set = new HashSet<>();
