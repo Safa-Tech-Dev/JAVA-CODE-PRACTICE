@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array1d;
+package JavaPractice.src.com.safatech.dsa.datastructure.array1d;
 
 import java.util.Arrays;
 
