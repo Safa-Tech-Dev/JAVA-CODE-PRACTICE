@@ -1,7 +1,5 @@
 package JavaPractice.src.com.safatech.string;
 
-import JavaPractice.src.com.safatech.corejava.CoreJava;
-
 public class LeftRotation {
 
     public static String rotateLeft(String str, int rotationFactor){
