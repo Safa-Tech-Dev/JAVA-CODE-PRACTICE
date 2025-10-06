@@ -1,9 +1,9 @@
-package com.safatech.thread;
+package JavaPractice.src.com.safatech.thread;
 
 public class Producer extends Thread{
 
-    Company c;
-    Producer(Company c){
+    com.safatech.thread.Company c;
+    public Producer(com.safatech.thread.Company c){
         this.c = c;
     }
     public void run(){

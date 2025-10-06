@@ -1,9 +1,9 @@
-package com.safatech.thread;
+package JavaPractice.src.com.safatech.thread;
 
 public class Consumer extends Thread{
 
-    Company c;
-    Consumer(Company c){
+    com.safatech.thread.Company c;
+    public Consumer(com.safatech.thread.Company c){
         this.c = c;
     }
     public void run(){
