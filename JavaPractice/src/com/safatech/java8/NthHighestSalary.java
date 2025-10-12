@@ -1,4 +1,4 @@
-package com.safatech.java8;
+package JavaPractice.src.com.safatech.java8;
 
 import java.util.Collections;
 import java.util.HashMap;
