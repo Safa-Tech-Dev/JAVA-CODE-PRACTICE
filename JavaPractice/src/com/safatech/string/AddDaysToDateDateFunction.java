@@ -3,7 +3,7 @@ package JavaPractice.src.com.safatech.string;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class AddDaysToDate {
+public class AddDaysToDateDateFunction {
 
     public static String addDaysToDate(String stringDate, int addDays){
 
