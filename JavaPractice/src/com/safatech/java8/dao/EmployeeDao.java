@@ -16,7 +16,7 @@ public class EmployeeDao {
        employeeList.add(new Employee(569, "Asif" , "ECE", "C",1200000));
        return employeeList;*/
        for(int i = 1 ; i < 1000; i++){
-           employeeList.add(new Employee(i , "emp"+i,"xxx"+i, "A"+i, Long.valueOf(new Random().nextInt(1000 * 100))));
+           employeeList.add(new Employee(i , "emp"+i,"xxx"+i, "A", Long.valueOf(new Random().nextInt(1000 * 100))));
        }
        return employeeList;
    }
