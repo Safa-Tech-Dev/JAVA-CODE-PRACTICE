@@ -17,13 +17,18 @@ public class MapReduceExample {
         }
         System.out.println(sum);*/
 
-        int sum = numbers.stream().mapToInt(i -> i).sum();
+        int sum = numbers.stream()
+                // convert Stream<Integer> to IntStream (Object to primitive)
+                .mapToInt(i -> i)
+                .sum();
         System.out.println(sum);
 
-        Integer reduceSum = numbers.stream().reduce(0, (a, b) -> a + b);
+        Integer reduceSum = numbers.stream()
+                .reduce(0, (a, b) -> a + b);
         System.out.println(reduceSum);
 
-        Optional<Integer> reduceSumWithMR = numbers.stream().reduce(Integer::sum);
+        Optional<Integer> reduceSumWithMR = numbers.stream()
+                .reduce(Integer::sum);
         System.out.println(reduceSumWithMR.get());
 
         Integer reduceMultiply = numbers.stream().reduce(1, (a, b) -> a * b);
@@ -40,23 +45,5 @@ public class MapReduceExample {
                 .reduce((word1, word2) -> word1.length() > word2.length() ? word1 : word2)
                 .get();
         System.out.println(longestString);
-
-        //get the employee whose grade A
-        //get the avg salary
-
-        double avgSalary = EmployeeDao.getEmployees().stream()
-                .filter(employee -> employee.getGrade().equalsIgnoreCase("A"))
-                .map(employee -> employee.getSalary())
-                .mapToDouble(i -> i)
-                .average().getAsDouble();
-
-        System.out.println(avgSalary);
-        double sumOfSalary = EmployeeDao.getEmployees().stream()
-                .filter(employee -> employee.getGrade().equalsIgnoreCase("A"))
-                .map(employee -> employee.getSalary())
-                .mapToDouble(i -> i)
-                .sum();
-
-        System.out.println(sumOfSalary);
     }
 }
