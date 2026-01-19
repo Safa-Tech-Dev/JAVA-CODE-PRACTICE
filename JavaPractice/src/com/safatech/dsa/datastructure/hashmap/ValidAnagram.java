@@ -7,18 +7,14 @@ public class ValidAnagram {
 
     static Map<Character, Integer> makeFrequencyMap(String s){
 
-        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> freq = new HashMap<>();
 
-        for(int i = 0; i < s.length(); i++){
-            Character ch = s.charAt(i);
-            if(!map.containsKey(ch)){
-                map.put(ch, 1);
-            }else{
-                int currentFrequency = map.get(ch);
-                map.put(ch, currentFrequency + 1);
-            }
+        for(Character c : s.toCharArray()){
+
+            freq.put(c, freq.getOrDefault(c, 0) + 1);
+
         }
-        return map;
+        return freq;
     }
 
     // Taking more space as we are using two Map
@@ -37,13 +33,13 @@ public class ValidAnagram {
             return false;
         Map<Character, Integer> map = makeFrequencyMap(s);
 
-        for(int i = 0; i < t.length(); i++){
+        for(Character c : t.toCharArray()){
 
-            Character ch = t.charAt(i);
-            if(!map.containsKey(ch))
+            if(!map.containsKey(c))
                 return false;
-            int currentFrequency = map.get(ch);
-            map.put(ch, currentFrequency - 1);
+
+            Integer currFreq = map.get(c);
+            map.put(c, currFreq - 1);
         }
         // All valuse in map should be zero for s and t to be anagrams
         for(Integer i : map.values()){
