@@ -49,14 +49,39 @@ public class ValidAnagram {
         return true;
     }
 
+    public static boolean isAnagram2(String s, String t){
+
+        // If lengths are different, they can't be anagram
+        if(s.length() != t.length()){
+            return false;
+        }
+        // create an array to count character frequencies
+        // assuming only lower case English letters
+        int[] charCount = new int[26];
+        // increment count for each character in 's' and decrement for each character in 't'
+        for(int i = 0; i < s.length(); i++){
+
+            charCount[s.charAt(i) - 'a']++;
+            charCount[t.charAt(i) - 'a']--;
+        }
+        // check if all counts are zero
+        for(int count : charCount){
+
+            if(count != 0){
+                return false;
+            }
+        }
+        return true; //  All counts are zero so 's' is anagram of 't'
+    }
+
     public static void main(String[] args) {
 
         String s1 = "anagram";
         String t1 = "nagaram";
         String s2 = "rat";
         String t2 = "car";
-        System.out.println(isAnagram1(s1,t1)); // true
-        System.out.println(isAnagram1(s2,t2)); // false
+        System.out.println(isAnagram2(s1,t1)); // true
+        System.out.println(isAnagram2(s2,t2)); // false
 
 
     }
