@@ -1,4 +1,4 @@
-package com.safatech.java8;
+package JavaPractice.src.com.safatech.java8;
 
 import com.safatech.java8.dao.CustomerDao;
 import com.safatech.java8.model.Customer;
