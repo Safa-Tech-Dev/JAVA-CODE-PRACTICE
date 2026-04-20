@@ -33,9 +33,9 @@ public class MaxSubarraySumEqualK {
         //initialize the maxMum as the sum of first window
         int maxSum = sum;
         // slide the window across the array
-        for(int i = 1; i <= n - k; i++){
-            // remove element leaving the window, add new element entering the window, -1 because index starts 0
-            sum = sum - arr[i-1] + arr[i+k-1];
+        for(int i = k; i < n; i++){
+            // remove element leaving the window, add new element entering the window
+            sum += arr[i] - arr[i-k];
             maxSum = Math.max(maxSum, sum); // update maxSum
         }
         return maxSum;
