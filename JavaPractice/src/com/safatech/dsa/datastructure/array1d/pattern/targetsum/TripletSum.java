@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array1d.pattern.targetsum;
+package JavaPractice.src.com.safatech.dsa.datastructure.array1d.pattern.targetsum;
 
 /**
  * count no. of triplets in the array1d whose sum is equal to the given value x.
