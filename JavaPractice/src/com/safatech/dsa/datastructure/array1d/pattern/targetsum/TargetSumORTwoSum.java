@@ -1,4 +1,4 @@
-package com.safatech.dsa.datastructure.array1d.pattern.targetsum;
+package JavaPractice.src.com.safatech.dsa.datastructure.array1d.pattern.targetsum;
 
 /**
  * find the total no. of pairs in the array whose sum is equal to the given value x.
