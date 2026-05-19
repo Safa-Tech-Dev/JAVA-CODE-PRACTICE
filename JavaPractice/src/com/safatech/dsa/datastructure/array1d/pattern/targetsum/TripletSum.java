@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * # leetcode : 18
+ * # leetcode : 15
  * count no. of triplets in the array1d whose sum is equal to the given value x.
  */
 public class TripletSum {
