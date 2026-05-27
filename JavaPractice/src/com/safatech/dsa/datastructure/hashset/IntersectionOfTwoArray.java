@@ -1,10 +1,13 @@
-package com.safatech.dsa.datastructure.hashset;
+package JavaPractice.src.com.safatech.dsa.datastructure.hashset;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * # 349
+ * Intuition -> Input array not sorted so, No Two approach,
+ * Result element must be unique so, use Set
  * Given two integer arrays nums1 and nums2, return an array1d of their intersection.
  * Each element in the result must be unique and you may return the result in any order
  * Example 1:
@@ -15,16 +18,7 @@ import java.util.Set;
  * Output: [9,4]
  * Explanation: [4,9] is also accepted.
  */
-public class IntersectionOfArray {
-
-    public static void main(String[] args) {
-
-        int[] input1 = {4,9,5};
-        int[] input2 = {9,4,9,8,4};
-        int[] result = IntersectionOfArray.getIntersectedArray(input1, input2);
-        System.out.println(Arrays.toString(result));
-
-    }
+public class IntersectionOfTwoArray {
 
     private static int[] getIntersectedArray(int[] nums1, int[] nums2){
 
@@ -43,6 +37,15 @@ public class IntersectionOfArray {
             result[index++] = key;
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+
+        int[] input1 = {4,9,5};
+        int[] input2 = {9,4,9,8,4};
+        int[] result = IntersectionOfTwoArray.getIntersectedArray(input1, input2);
+        System.out.println(Arrays.toString(result));
+
     }
 
 }
