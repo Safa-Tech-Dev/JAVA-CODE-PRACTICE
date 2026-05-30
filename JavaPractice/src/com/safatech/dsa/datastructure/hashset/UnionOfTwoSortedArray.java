@@ -1,4 +1,4 @@
-package JavaPractice.src.com.safatech.dsa.datastructure.array1d.pattern.twopointerers;
+package JavaPractice.src.com.safatech.dsa.datastructure.hashset;
 
 import java.util.ArrayList;
 import java.util.HashSet;
