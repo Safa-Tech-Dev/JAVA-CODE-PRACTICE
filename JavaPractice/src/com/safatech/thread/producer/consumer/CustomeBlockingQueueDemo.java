@@ -28,7 +28,7 @@ public class CustomeBlockingQueueDemo {
             for(int i = 1; i <= 5; i++){
                 try{
                     int value = queue.take();
-                    System.out.println("consumed : " + i);
+                    System.out.println("consumed : " + value);
                     Thread.sleep(1000);
 
                 }catch (InterruptedException e){
